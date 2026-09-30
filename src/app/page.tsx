@@ -150,55 +150,38 @@ const PHOTOS = [
 ]
 
 const VIDEOS = [
-  {
-    id: 1,
-    title: '-0 (Video Oficial)',
-    year: '2022',
-    duration: '3:24',
-    youtubeId: 'aDrrZB0hOfA',
-  },
-  {
-    id: 2,
-    title: 'Bakanora',
-    year: '2022',
-    duration: '3:18',
-    youtubeId: 'wkoGx0YyZBQ',
-  },
-  {
-    id: 3,
-    title: 'Tentacion X Juan Roldan',
-    year: '2023',
-    duration: '3:36',
-    youtubeId: '0B00IbU6F08',
-  },
-  {
-    id: 4,
-    title: 'Soy Nada',
-    year: '2024',
-    duration: '2:58',
-    youtubeId: 'kC7GvnraUpE',
-  },
-  {
-    id: 5,
-    title: 'Lokura X Gabyl',
-    year: '2024',
-    duration: '3:02',
-    youtubeId: 'I5WYssqLI54',
-  },
-  {
-    id: 6,
-    title: 'Segundo Intento',
-    year: '2024',
-    duration: '2:45',
-    youtubeId: 'D78OU0V-pAI',
-  },
+  { id: 1, title: '-0 (Video Oficial)', year: '2022', duration: '3:24', youtubeId: 'aDrrZB0hOfA' },
+  { id: 2, title: 'Bakanora', year: '2022', duration: '3:18', youtubeId: 'wkoGx0YyZBQ' },
+  { id: 3, title: 'Tentacion X Juan Roldan', year: '2023', duration: '3:36', youtubeId: '0B00IbU6F08' },
+  { id: 4, title: 'Soy Nada', year: '2024', duration: '2:58', youtubeId: 'kC7GvnraUpE' },
+  { id: 5, title: 'Lokura X Gabyl', year: '2024', duration: '3:02', youtubeId: 'I5WYssqLI54' },
+  { id: 6, title: 'Segundo Intento', year: '2024', duration: '2:45', youtubeId: 'D78OU0V-pAI' },
+  { id: 7, title: 'Tentacion (Solo)', year: '2023', duration: '3:30', youtubeId: 'Dyw3nOKoWkg' },
+  { id: 8, title: 'Lokura (Solo)', year: '2022', duration: '3:00', youtubeId: 'ZWRPcu2P_Ts' },
+  { id: 9, title: 'Bakanora (Remix 2024)', year: '2024', duration: '3:25', youtubeId: 'OslbqrkxATI' },
+  { id: 10, title: 'Trampa', year: '2023', duration: '2:50', youtubeId: 'vO1w6dhGJ8o' },
+  { id: 11, title: 'Para Qué Huir', year: '2024', duration: '3:05', youtubeId: 'PQvgxLGSFGo' },
+  { id: 12, title: 'WII (Visualizer)', year: '2024', duration: '2:40', youtubeId: 'CiPyR-Nzflw' },
+  { id: 13, title: 'De Repente (Visualizer)', year: '2024', duration: '2:55', youtubeId: 't-K94IfG1s4' },
+  { id: 14, title: '-0 (Videolyric)', year: '2022', duration: '3:20', youtubeId: 'dm_FcQLz_Vw' },
+  { id: 15, title: 'Viajero del Tiempo', year: '2023', duration: '3:15', youtubeId: '77Oafggr4o0' },
+  { id: 16, title: 'Me siento bien', year: '2024', duration: '2:48', youtubeId: 'w8LO_ABN9S4' },
+  { id: 17, title: '27052022', year: '2022', duration: '3:10', youtubeId: 'dd-sXwxTCTo' },
+  { id: 18, title: 'Cover Sensual', year: '2024', duration: '2:30', youtubeId: 'AvhQFvkqGC8' },
 ]
 
-const DISCOGRAPHY = [
-  { title: 'Bakanora', year: 2022, type: 'Single', tracks: 1, color: 'from-fuchsia-500/30 to-amber-500/20', note: '25,878+ plays en Spotify' },
-  { title: 'Tentacion (ft. Juan Roldan)', year: 2023, type: 'Single', tracks: 1, color: 'from-amber-500/30 to-rose-500/20', note: 'Video oficial en YouTube' },
-  { title: '-0', year: 2022, type: 'Single', tracks: 1, color: 'from-violet-500/30 to-cyan-500/20', note: 'Video + Videolyric oficial' },
-  { title: 'Lokura (Remix)', year: 2024, type: 'Remix', tracks: 1, color: 'from-rose-500/30 to-amber-500/20', note: 'X Gabyl - 2024 Remaster' },
+// Discografía completa de Spotify con track IDs y carátulas reales
+const SPOTIFY_TRACKS = [
+  { title: 'Tentacion', trackId: '7fgItMw2q8YtxudX7bnmOi', cover: '/photos/covers/7fgItMw2q8YtxudX7bnmOi.jpg' },
+  { title: 'Bakanora', trackId: '7LUfZPi0ypwoQleC1SSK0L', cover: '/photos/covers/7LUfZPi0ypwoQleC1SSK0L.jpg' },
+  { title: 'Lokura', trackId: '2QZq81vHGvv9uKBAp07dGr', cover: '/photos/covers/2QZq81vHGvv9uKBAp07dGr.jpg' },
+  { title: 'Soy Nada', trackId: '1ejTe3Z2K03rYw7yg06GJJ', cover: '/photos/covers/1ejTe3Z2K03rYw7yg06GJJ.jpg' },
+  { title: 'Voy A Olvidar', trackId: '2TeZIVTjabmKGgtIDti0dT', cover: '/photos/covers/2TeZIVTjabmKGgtIDti0dT.jpg' },
+  { title: 'Manicomio', trackId: '1OuqGRD2z7DkRoFUNFwsnW', cover: '/photos/covers/1OuqGRD2z7DkRoFUNFwsnW.jpg' },
+  { title: 'Solo una Noche', trackId: '2PaWZbJoJiyMGRQZD4uY14', cover: '/photos/covers/2PaWZbJoJiyMGRQZD4uY14.jpg' },
+  { title: 'Solo Tu', trackId: '00QaokeOftbGTiAYKCO7JF', cover: '/photos/covers/00QaokeOftbGTiAYKCO7JF.jpg' },
+  { title: 'En Visto', trackId: '4VK07d82GZPykv8V5bAA5n', cover: '/photos/covers/4VK07d82GZPykv8V5bAA5n.jpg' },
+  { title: 'Playa', trackId: '5cz8oQWCRmqjb6pWnIDmSV', cover: '/photos/covers/5cz8oQWCRmqjb6pWnIDmSV.jpg' },
 ]
 
 const SHOWS = [
@@ -918,25 +901,29 @@ function PhotoGallery() {
    ============================================================ */
 function MusicVideos() {
   const [active, setActive] = useState<number | null>(null)
+  const [showAll, setShowAll] = useState(false)
+
+  // Mostrar primero 6, luego el resto con "ver más"
+  const visibleVideos = showAll ? VIDEOS : VIDEOS.slice(0, 6)
 
   return (
     <section id="videos" className="relative py-24 md:py-32 noise-overlay">
       <div className="mx-auto max-w-7xl px-6 md:px-8">
         <SectionHeading
-          kicker="Videos"
+          kicker="Videos · YouTube"
           title="Música en movimiento"
-          description="Videos oficiales, live sessions y acústicos. Reemplaza cada tarjeta con tu video de YouTube o MP4."
+          description={`18 videos oficiales del canal YouTube de Alfred White. Haz clic en cualquier video para reproducirlo automáticamente.`}
         />
 
-        <div className="grid md:grid-cols-3 gap-5">
-          {VIDEOS.map((video, i) => (
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-5">
+          {visibleVideos.map((video, i) => (
             <motion.div
               key={video.id}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: '-50px' }}
-              transition={{ duration: 0.6, delay: i * 0.12 }}
-              className="group relative rounded-3xl overflow-hidden glow-border cursor-pointer bg-card"
+              transition={{ duration: 0.5, delay: (i % 3) * 0.1 }}
+              className="group relative rounded-2xl overflow-hidden glow-border cursor-pointer bg-card"
               onClick={() => setActive(video.id)}
             >
               {/* Aspecto 16:9 con miniatura real de YouTube */}
@@ -952,41 +939,66 @@ function MusicVideos() {
 
                 {/* Botón play */}
                 <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="relative h-16 w-16 md:h-20 md:w-20 rounded-full bg-background/30 backdrop-blur-md flex items-center justify-center border border-white/20 transition-transform duration-500 group-hover:scale-110">
-                    <Play className="h-6 w-6 md:h-8 md:w-8 text-foreground fill-foreground ml-1" />
+                  <div className="relative h-14 w-14 md:h-16 md:w-16 rounded-full bg-background/30 backdrop-blur-md flex items-center justify-center border border-white/20 transition-transform duration-500 group-hover:scale-110">
+                    <Play className="h-5 w-5 md:h-6 md:w-6 text-foreground fill-foreground ml-1" />
                     <div className="absolute inset-0 rounded-full ring-2 ring-amber-400/40 animate-pulse-glow" />
                   </div>
                 </div>
 
                 {/* Duración */}
-                <div className="absolute bottom-3 right-3 px-2 py-1 rounded-md bg-background/80 backdrop-blur-sm text-[11px] font-mono">
+                <div className="absolute bottom-2 right-2 px-2 py-0.5 rounded-md bg-background/80 backdrop-blur-sm text-[10px] font-mono">
                   {video.duration}
                 </div>
 
                 {/* Año */}
-                <div className="absolute top-3 left-3 px-2 py-1 rounded-md glass text-[11px] uppercase tracking-widest text-primary/90">
+                <div className="absolute top-2 left-2 px-2 py-0.5 rounded-md glass text-[10px] uppercase tracking-widest text-primary/90">
                   {video.year}
                 </div>
 
                 {/* Video icon */}
-                <div className="absolute top-3 right-3">
-                  <Video className="h-4 w-4 text-foreground/60 drop-shadow-lg" />
+                <div className="absolute top-2 right-2">
+                  <Video className="h-3.5 w-3.5 text-foreground/60 drop-shadow-lg" />
                 </div>
               </div>
 
               {/* Footer */}
-              <div className="relative bg-card/60 backdrop-blur-sm p-4 flex items-center justify-between">
-                <div>
-                  <h3 className="font-serif-display text-base md:text-lg text-foreground">
+              <div className="relative bg-card/80 backdrop-blur-sm p-3 flex items-center justify-between">
+                <div className="min-w-0 flex-1">
+                  <h3 className="font-serif-display text-sm md:text-base text-foreground truncate">
                     {video.title}
                   </h3>
-                  <p className="text-xs text-muted-foreground mt-0.5">Video oficial</p>
+                  <p className="text-[10px] text-muted-foreground mt-0.5">Video oficial</p>
                 </div>
-                <ArrowUpRight className="h-4 w-4 text-primary/60 group-hover:text-primary group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all" />
+                <ArrowUpRight className="h-4 w-4 text-primary/60 group-hover:text-primary group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all flex-shrink-0 ml-2" />
               </div>
             </motion.div>
           ))}
         </div>
+
+        {/* Botón Ver más / Ver menos */}
+        {VIDEOS.length > 6 && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            className="mt-8 flex justify-center"
+          >
+            <Button
+              variant="outline"
+              className="rounded-full border-white/20 text-foreground hover:bg-white/5 px-8"
+              onClick={() => setShowAll(!showAll)}
+            >
+              {showAll ? (
+                <>Ver menos</>
+              ) : (
+                <>
+                  Ver todos los videos ({VIDEOS.length})
+                  <ArrowUpRight className="ml-2 h-4 w-4" />
+                </>
+              )}
+            </Button>
+          </motion.div>
+        )}
 
         <motion.div
           initial={{ opacity: 0 }}
@@ -995,7 +1007,16 @@ function MusicVideos() {
           className="mt-8 text-center"
         >
           <p className="text-xs text-muted-foreground">
-            ✦ Videos oficiales reales del canal YouTube de Alfred White · Click para reproducir
+            ✦ {VIDEOS.length} videos oficiales del canal{' '}
+            <a
+              href={ARTIST.social.youtube}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-primary/80 hover:text-primary transition-colors"
+            >
+              @alfredwhiteco ↗
+            </a>{' '}
+            · Click para reproducir con autoplay
           </p>
         </motion.div>
       </div>
@@ -1022,7 +1043,7 @@ function MusicVideos() {
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.85, opacity: 0 }}
               transition={{ duration: 0.3 }}
-              className="relative w-full max-w-4xl aspect-video rounded-2xl overflow-hidden glow-border"
+              className="relative w-full max-w-4xl rounded-2xl overflow-hidden glow-border"
               onClick={(e) => e.stopPropagation()}
             >
               <iframe
@@ -1043,77 +1064,216 @@ function MusicVideos() {
 }
 
 /* ============================================================
-   SECCIÓN: Discografía
+   SECCIÓN: Discografía completa de Spotify con preview
    ============================================================ */
 function Discography() {
+  const [previewing, setPreviewing] = useState<string | null>(null)
+  const [activeTrack, setActiveTrack] = useState<string | null>(null)
+  const hoverTimeoutRef = useRef<NodeJS.Timeout | null>(null)
+
+  const handleMouseEnter = (trackId: string) => {
+    // Pequeño delay para evitar activaciones accidentales
+    if (hoverTimeoutRef.current) clearTimeout(hoverTimeoutRef.current)
+    hoverTimeoutRef.current = setTimeout(() => {
+      setPreviewing(trackId)
+    }, 400)
+  }
+
+  const handleMouseLeave = () => {
+    if (hoverTimeoutRef.current) clearTimeout(hoverTimeoutRef.current)
+    setPreviewing(null)
+  }
+
+  const openInSpotify = (trackId: string) => {
+    window.open(`https://open.spotify.com/track/${trackId}`, '_blank')
+  }
+
   return (
     <section id="musica" className="relative py-24 md:py-32 bg-card/30">
       <div className="mx-auto max-w-7xl px-6 md:px-8">
         <SectionHeading
-          kicker="Discografía"
-          title="Su música en discos"
-          description="Álbumes, EPs y live sessions. Toda la discografía disponible en streaming."
+          kicker="Discografía · Spotify"
+          title="Toda su música"
+          description="10 tracks disponibles en Spotify. Pasa el cursor sobre cualquier carátula para escuchar un preview, o haz clic para abrir el reproductor completo."
         />
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
-          {DISCOGRAPHY.map((album, i) => (
+        {/* Grid de tracks con carátulas reales */}
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 md:gap-5">
+          {SPOTIFY_TRACKS.map((track, i) => (
             <motion.div
-              key={album.title}
+              key={track.trackId}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: '-50px' }}
-              transition={{ duration: 0.6, delay: i * 0.1 }}
+              transition={{ duration: 0.5, delay: (i % 5) * 0.08 }}
               whileHover={{ y: -8 }}
-              className="group relative rounded-3xl overflow-hidden glow-border cursor-pointer"
+              onMouseEnter={() => handleMouseEnter(track.trackId)}
+              onMouseLeave={handleMouseLeave}
+              onClick={() => setActiveTrack(track.trackId)}
+              className="group relative rounded-2xl overflow-hidden glow-border cursor-pointer bg-card"
             >
-              {/* Portada */}
+              {/* Carátula real de Spotify */}
               <div className="relative aspect-square overflow-hidden">
-                <div className={`absolute inset-0 bg-gradient-to-br ${album.color}`} />
-                <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,oklch(0.85_0.15_75_/_20%),transparent_60%)]" />
-                {/* Vinilo giratorio */}
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="relative h-[70%] w-[70%] rounded-full bg-black/80 shadow-2xl transition-transform duration-700 group-hover:rotate-180 flex items-center justify-center">
-                    <div className="absolute inset-4 rounded-full border border-white/10" />
-                    <div className="absolute inset-8 rounded-full border border-white/5" />
-                    <div className="absolute inset-12 rounded-full border border-white/5" />
-                    <div className="h-[30%] w-[30%] rounded-full bg-gradient-to-br from-amber-400 to-fuchsia-500 flex items-center justify-center">
-                      <Disc3 className="h-5 w-5 text-background" />
-                    </div>
+                <img
+                  src={track.cover}
+                  alt={`Carátula de ${track.title} - Alfred White`}
+                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  loading="lazy"
+                />
+                {/* Overlay oscuro al hover */}
+                <div className="absolute inset-0 bg-background/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+
+                {/* Botón de play al hover */}
+                <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <div className="relative h-14 w-14 rounded-full bg-[#1DB954] flex items-center justify-center shadow-2xl">
+                    <Play className="h-6 w-6 text-black fill-black ml-1" />
+                    <div className="absolute inset-0 rounded-full ring-4 ring-[#1DB954]/30 animate-pulse-glow" />
                   </div>
                 </div>
-                {/* Año */}
-                <div className="absolute top-3 right-3 px-2 py-1 rounded-md glass text-[11px] font-mono">
-                  {album.year}
-                </div>
-              </div>
-              {/* Info */}
-              <div className="p-4 bg-card/60">
-                <div className="flex items-center gap-2 mb-1">
-                  <span className="text-[10px] uppercase tracking-widest text-primary/80 px-2 py-0.5 rounded-full bg-primary/10">
-                    {album.type}
-                  </span>
-                  <span className="text-[10px] text-muted-foreground">
-                    {album.tracks} tracks
-                  </span>
-                </div>
-                <h3 className="font-serif-display text-lg text-foreground">
-                  {album.title}
-                </h3>
-                <div className="mt-3 flex items-center gap-2">
-                  <Button
-                    size="sm"
-                    variant="ghost"
-                    className="h-8 px-3 text-xs hover:bg-white/5"
-                    onClick={() => window.open(ARTIST.social.spotify, '_blank')}
+
+                {/* Indicador de preview activo */}
+                {previewing === track.trackId && (
+                  <motion.div
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    className="absolute bottom-2 left-2 right-2 glass rounded-lg px-2 py-1 flex items-center gap-1.5"
                   >
-                    <Spotify className="h-3.5 w-3.5 mr-1.5" /> Escuchar
-                  </Button>
+                    <Equalizer bars={4} className="h-3 flex-shrink-0" />
+                    <span className="text-[10px] uppercase tracking-wider text-[#1DB954] font-medium">
+                      Preview
+                    </span>
+                  </motion.div>
+                )}
+
+                {/* Número de track */}
+                <div className="absolute top-2 right-2 h-7 w-7 rounded-full glass flex items-center justify-center text-[11px] font-mono text-foreground/80">
+                  {String(i + 1).padStart(2, '0')}
                 </div>
               </div>
+
+              {/* Info del track */}
+              <div className="p-3 bg-card/80 backdrop-blur-sm">
+                <h3 className="font-serif-display text-sm md:text-base text-foreground truncate">
+                  {track.title}
+                </h3>
+                <div className="flex items-center justify-between mt-1.5">
+                  <span className="text-[10px] uppercase tracking-widest text-[#1DB954]/80 flex items-center gap-1">
+                    <Spotify className="h-3 w-3" /> Spotify
+                  </span>
+                  <button
+                    onClick={(e) => {
+                      e.stopPropagation()
+                      openInSpotify(track.trackId)
+                    }}
+                    className="text-[10px] uppercase tracking-wider text-muted-foreground hover:text-primary transition-colors"
+                    aria-label="Abrir en Spotify"
+                  >
+                    Abrir ↗
+                  </button>
+                </div>
+              </div>
+
+              {/* Preview iframe flotante (se carga solo cuando se hace hover) */}
+              {previewing === track.trackId && (
+                <div className="absolute inset-x-0 -bottom-1 opacity-0 pointer-events-none">
+                  <iframe
+                    src={`https://open.spotify.com/embed/track/${track.trackId}?utm_source=generator&theme=0`}
+                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                    loading="lazy"
+                    className="w-full h-[80px]"
+                    title={`Preview de ${track.title}`}
+                  />
+                </div>
+              )}
             </motion.div>
           ))}
         </div>
+
+        {/* CTA inferior a Spotify */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="mt-10 flex flex-col sm:flex-row items-center justify-between gap-4 glass rounded-3xl p-6"
+        >
+          <div className="flex items-center gap-4">
+            <div className="h-12 w-12 rounded-xl bg-[#1DB954]/20 flex items-center justify-center">
+              <Spotify className="h-6 w-6 text-[#1DB954]" />
+            </div>
+            <div>
+              <p className="font-serif-display text-lg text-foreground">
+                Escucha la discografía completa
+              </p>
+              <p className="text-sm text-muted-foreground">
+                10 tracks · 309 oyentes mensuales · Bakanora 25K+ plays
+              </p>
+            </div>
+          </div>
+          <Button
+            className="rounded-full bg-[#1DB954] text-black hover:bg-[#1DB954]/90 px-6 font-medium"
+            onClick={() => window.open(ARTIST.social.spotify, '_blank')}
+          >
+            <Spotify className="mr-2 h-4 w-4" /> Abrir Spotify
+            <ArrowUpRight className="ml-2 h-4 w-4" />
+          </Button>
+        </motion.div>
       </div>
+
+      {/* Modal reproductor completo de Spotify */}
+      <AnimatePresence>
+        {activeTrack && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 z-[60] bg-background/95 backdrop-blur-md flex items-center justify-center p-6"
+            onClick={() => setActiveTrack(null)}
+          >
+            <button
+              className="absolute top-6 right-6 p-3 rounded-full glass hover:bg-white/10"
+              onClick={() => setActiveTrack(null)}
+              aria-label="Cerrar"
+            >
+              <X className="h-5 w-5" />
+            </button>
+            <motion.div
+              initial={{ scale: 0.85, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.85, opacity: 0 }}
+              transition={{ duration: 0.3 }}
+              className="relative w-full max-w-md rounded-3xl overflow-hidden glow-border bg-card"
+              onClick={(e) => e.stopPropagation()}
+            >
+              {/* Header con carátula */}
+              <div className="relative aspect-square overflow-hidden">
+                <img
+                  src={SPOTIFY_TRACKS.find((t) => t.trackId === activeTrack)?.cover}
+                  alt="Carátula"
+                  className="absolute inset-0 w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-card via-card/40 to-transparent" />
+                <div className="absolute bottom-0 inset-x-0 p-6">
+                  <p className="text-xs uppercase tracking-widest text-[#1DB954] mb-1">
+                    Reproduciendo en Spotify
+                  </p>
+                  <h3 className="font-serif-display text-2xl text-foreground">
+                    {SPOTIFY_TRACKS.find((t) => t.trackId === activeTrack)?.title}
+                  </h3>
+                  <p className="text-sm text-muted-foreground mt-1">Alfred White</p>
+                </div>
+              </div>
+              {/* Reproductor embed de Spotify */}
+              <iframe
+                src={`https://open.spotify.com/embed/track/${activeTrack}?utm_source=generator&theme=0`}
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                className="w-full h-[152px]"
+                title="Reproductor de Spotify"
+              />
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </section>
   )
 }
