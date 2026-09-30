@@ -454,6 +454,34 @@ function FloatingNav() {
 /* ============================================================
    SECCIÓN: Hero
    ============================================================ */
+
+// Video de fondo de YouTube para el Hero (loop + mute + autoplay)
+// Usamos "Bakanora" (25K+ plays en Spotify) como video de fondo
+const HERO_BG_VIDEO_ID = 'wkoGx0YyZBQ'
+
+function YouTubeBackground({ videoId }: { videoId: string }) {
+  return (
+    <div className="absolute inset-0 overflow-hidden pointer-events-none">
+      {/* Video de YouTube en loop, mute, autoplay */}
+      <div className="absolute inset-0 w-full h-full scale-[1.35]">
+        <iframe
+          src={`https://www.youtube.com/embed/${videoId}?autoplay=1&mute=1&loop=1&playlist=${videoId}&controls=0&showinfo=0&modestbranding=1&rel=0&iv_load_policy=3&disablekb=1&playsinline=1&start=10&end=80`}
+          allow="autoplay; encrypted-media; picture-in-picture"
+          allowFullScreen={false}
+          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[177.78vh] h-[56.25vw] min-w-full min-h-full"
+          style={{ pointerEvents: 'none' }}
+          title="Background video"
+          aria-hidden="true"
+        />
+      </div>
+      {/* Overlay oscuro para legibilidad del texto - gradiente multicapa */}
+      <div className="absolute inset-0 bg-background/70" />
+      <div className="absolute inset-0 bg-gradient-to-b from-background/60 via-background/40 to-background/80" />
+      <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-background/40" />
+    </div>
+  )
+}
+
 function Hero() {
   const ref = useRef<HTMLDivElement>(null)
   const { scrollYProgress } = useScroll({
@@ -470,6 +498,8 @@ function Hero() {
       ref={ref}
       className="relative min-h-screen flex items-center justify-center hero-gradient noise-overlay overflow-hidden"
     >
+      {/* Video de fondo de YouTube (loop + mute + oscurecido) */}
+      <YouTubeBackground videoId={HERO_BG_VIDEO_ID} />
       <FloatingOrbs />
       <Particles />
 
@@ -495,7 +525,7 @@ function Hero() {
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.9, delay: 0.4, ease: [0.21, 0.47, 0.32, 0.98] }}
-          className="font-display text-[clamp(4rem,16vw,16rem)] leading-[0.85] text-gold-gradient"
+          className="font-display text-[clamp(4rem,16vw,16rem)] leading-[0.85] text-gold-gradient drop-shadow-[0_4px_30px_rgba(0,0,0,0.8)]"
         >
           {ARTIST.name}
         </motion.h1>
@@ -505,7 +535,7 @@ function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.7 }}
-          className="mt-6 font-serif-display italic text-xl md:text-2xl text-foreground/80"
+          className="mt-6 font-serif-display italic text-xl md:text-2xl text-foreground/90 drop-shadow-[0_2px_20px_rgba(0,0,0,0.8)]"
         >
           {ARTIST.tagline}
         </motion.p>
@@ -514,7 +544,7 @@ function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.85 }}
-          className="mt-4 max-w-xl mx-auto text-sm md:text-base text-muted-foreground leading-relaxed"
+          className="mt-4 max-w-xl mx-auto text-sm md:text-base text-foreground/80 leading-relaxed drop-shadow-[0_2px_15px_rgba(0,0,0,0.9)]"
         >
           {ARTIST.bioShort}
         </motion.p>
