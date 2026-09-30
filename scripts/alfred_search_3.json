@@ -1,0 +1,29 @@
+[
+  {
+    "url": "https://lists.apache.org",
+    "name": "TIKA-2966 -- checkpoint commit-Apache Mail Archives",
+    "snippet": "Oct 21, 2019 — This is an automated email from the ASF dual-hosted git repository. tallison pushed a commit to branch TIKA-2966 in repository ... Read more",
+    "host_name": "lists.apache.org",
+    "rank": 0,
+    "date": "Oct 21, 2019",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.scribd.com",
+    "name": "Zoberetimifid | PDF | Copyright",
+    "snippet": "The document provides a detailed guide on the Swift gloves in Old School RuneScape (OSRS), including their requirements, effects, and how to obtain them. Read more",
+    "host_name": "www.scribd.com",
+    "rank": 1,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.mail-archive.com",
+    "name": "TIKA-1332 -- add English Spanish common tokens",
+    "snippet": "Feb 16, 2017 — http://git-wip-us.apache.org/repos/asf/tika/blob/81150859/tika-eval/src/main/resources/common_tokens/en ... Read more",
+    "host_name": "www.mail-archive.com",
+    "rank": 2,
+    "date": "Feb 16, 2017",
+    "favicon": ""
+  }
+]

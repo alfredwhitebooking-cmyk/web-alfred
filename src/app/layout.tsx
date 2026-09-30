@@ -23,28 +23,33 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: "LUNA VERCEL — Artista Musical | Bio, Fotos, Videos y Shows",
+  title: "ALFRED WHITE — Artista Musical | Reggaeton · Trap · Producción",
   description:
-    "Sitio brochure de LUNA VERCEL. Descubre su historia, galería de fotos, videos musicales, discografía, próximos shows y bookings.",
+    "Sitio brochure de ALFRED WHITE. Desde las montañas de Colombia, hace reggaeton, trap y de todo lo que caiga. Bio, fotos, videos, discografía, shows y bookings.",
   keywords: [
+    "Alfred White",
     "artista musical",
-    "música",
+    "reggaeton",
+    "trap",
+    "Colombia",
+    "productor musical",
     "brochure",
     "bio",
     "videos",
     "shows",
-    "LUNA VERCEL",
   ],
-  authors: [{ name: "LUNA VERCEL" }],
+  authors: [{ name: "Alfred White" }],
   openGraph: {
-    title: "LUNA VERCEL — Artista Musical",
-    description: "Historia, fotos, videos y shows en un brochure animado.",
+    title: "ALFRED WHITE — Artista Musical",
+    description:
+      "Desde las montañas de Colombia. Reggaeton, trap y de todo lo que caiga. La música no tiene límites.",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "LUNA VERCEL — Artista Musical",
-    description: "Historia, fotos, videos y shows en un brochure animado.",
+    title: "ALFRED WHITE — Artista Musical",
+    description:
+      "Desde las montañas de Colombia. Reggaeton, trap y de todo lo que caiga.",
   },
 };
 

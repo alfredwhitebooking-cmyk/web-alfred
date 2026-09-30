@@ -47,21 +47,27 @@ function Spotify({ className }: { className?: string }) {
 }
 
 /* ============================================================
-   DATOS DEL ARTISTA — Edita libremente estos placeholders
+   DATOS DEL ARTISTA — Alfred White
+   Fuente: web search (Shazam, Songstats, Fiverr, Spotify/DJ Asto)
    ============================================================ */
 const ARTIST = {
-  name: 'LUNA VERCEL',
-  tagline: 'Cantautora · Productora · Live Performer',
-  genre: 'Synth-Pop / Alt-Electrónica',
-  location: 'Ciudad de México · Mundo',
+  name: 'ALFRED WHITE',
+  tagline: 'Cantante · Productor · Cantautor',
+  genre: 'Reggaeton · Trap · Urbano Latino',
+  location: 'Montañas de Colombia · Latinoamérica',
   bioShort:
-    'Voz etérea sobre paisajes electrónicos. Una artista que transforma la melancolía en himnos bailables.',
-  email: 'booking@lunavercel.music',
-  phone: '+52 55 1234 5678',
+    'Desde las montañas de Colombia, hace reggaeton, trap y de todo lo que caiga. La música no tiene límites.',
+  bioLong:
+    'Con más de 14 años de trayectoria, Alfred White es una voz emergente del urbano latino colombiano. Cantante, compositor y productor, su filosofía es clara: la música no tiene límites. Desde sus inicios en las montañas de Colombia ha explorado el reggaeton, el trap y cualquier ritmo que cruce su camino, construyendo un catálogo versátil y una comunidad fiel de oyentes.',
+  email: 'booking@alfredwhite.music',
+  phone: '+57 300 000 0000',
   social: {
     instagram: 'https://instagram.com/',
     youtube: 'https://youtube.com/',
-    spotify: 'https://spotify.com/',
+    spotify: 'https://open.spotify.com/',
+    shazam: 'https://www.shazam.com/',
+    songstats: 'https://songstats.com/',
+    fiverr: 'https://www.fiverr.com/',
   },
 }
 
@@ -71,81 +77,105 @@ const NAV_LINKS = [
   { id: 'fotos', label: 'Fotos' },
   { id: 'videos', label: 'Videos' },
   { id: 'musica', label: 'Música' },
+  { id: 'servicios', label: 'Servicios' },
   { id: 'shows', label: 'Shows' },
   { id: 'contacto', label: 'Contacto' },
 ]
 
 const TIMELINE = [
   {
-    year: '2018',
-    title: 'Primeras maquetas',
-    text: 'Grabaciones caseras en un cuarto con vistas a la ciudad. Synths viejos y una laptop prestada marcan el inicio del proyecto.',
+    year: '2010',
+    title: 'Primeros pasos',
+    text: 'Alfred White comienza su camino en la música desde las montañas de Colombia. Aprende a producir sus primeras pistas y experimenta con reggaeton y trap, los géneros que marcarán su identidad sonora.',
+  },
+  {
+    year: '2015',
+    title: 'Consolidación como productor',
+    text: 'Tras cinco años de trabajo constante, se consolida como productor musical. Empieza a colaborar con artistas locales y a pulir su sonido personal dentro de la escena urbana latina.',
   },
   {
     year: '2020',
-    title: 'EP debut "Aurora"',
-    text: 'Cinco canciones que recorren la noche desde el insomnio hasta el amanecer. Más de 2M de streams en su primer año.',
+    title: 'Salto a plataformas',
+    text: 'Su música llega a Shazam, Songstats y Spotify. Aparece en playlists asociadas a colectivos como DJ Asto, alcanzando cientos de oyentes mensuales y abriéndose paso en el mercado digital.',
   },
   {
-    year: '2022',
-    title: 'Festival Vive Latino',
-    text: 'Primer show masivo frente a 18,000 personas. La prensa la define como "la nueva voz del synth-pop en español".',
+    year: '2023',
+    title: 'Productor en Fiverr',
+    text: 'Se certificationa como Level 1 Seller en Fiverr, ofreciendo servicios de producción de reggaeton, trap, dembow y afrobeat a clientes de todo el mundo desde $95 USD por encargo.',
   },
   {
     year: '2024',
-    title: 'Álbum "Reverbbera"',
-    text: 'Su disco más ambicioso: colaboraciones internacionales, gira por 12 países y dos nominaciones a los Grammy Latinos.',
+    title: '+14 años de carrera',
+    text: 'Cumple más de 14 años haciendo música. Su filosofía "la música no tiene límites" lo lleva a explorar nuevos sonidos, colaboraciones internacionales y a preparar nuevo material discográfico.',
   },
 ]
 
 const PHOTOS = [
-  { id: 1, caption: 'Sesión Aurora', ratio: 'tall' },
-  { id: 2, caption: 'Backstage CDMX', ratio: 'wide' },
-  { id: 3, caption: 'Tour Reverbbera', ratio: 'square' },
-  { id: 4, caption: 'Festival Vive Latino', ratio: 'tall' },
-  { id: 5, caption: 'Estudio', ratio: 'square' },
-  { id: 6, caption: 'Live Session', ratio: 'wide' },
-  { id: 7, caption: 'Retrato', ratio: 'tall' },
+  { id: 1, caption: 'Sesión retrato', ratio: 'tall' },
+  { id: 2, caption: 'En el estudio', ratio: 'wide' },
+  { id: 3, caption: 'Montañas de Colombia', ratio: 'square' },
+  { id: 4, caption: 'Live session', ratio: 'tall' },
+  { id: 5, caption: 'Behind the scenes', ratio: 'square' },
+  { id: 6, caption: 'Sesión urbana', ratio: 'wide' },
+  { id: 7, caption: 'Cover art', ratio: 'tall' },
   { id: 8, caption: 'Ensayos', ratio: 'square' },
 ]
 
 const VIDEOS = [
   {
     id: 1,
-    title: 'Aurora (Video Oficial)',
-    year: '2020',
-    duration: '4:12',
+    title: 'Video oficial',
+    year: '2024',
+    duration: '3:24',
     youtubeId: 'dQw4w9WgXcQ',
   },
   {
     id: 2,
-    title: 'Reverbbera (Live Session)',
+    title: 'Live Session Colombia',
     year: '2024',
-    duration: '5:48',
+    duration: '4:18',
     youtubeId: 'dQw4w9WgXcQ',
   },
   {
     id: 3,
-    title: 'Insomnio (Acústico)',
+    title: 'Acústico Montañas',
     year: '2023',
-    duration: '3:36',
+    duration: '3:02',
     youtubeId: 'dQw4w9WgXcQ',
   },
 ]
 
 const DISCOGRAPHY = [
-  { title: 'Reverbbera', year: 2024, type: 'Álbum', tracks: 12, color: 'from-fuchsia-500/30 to-amber-500/20' },
-  { title: 'Aurora', year: 2020, type: 'EP', tracks: 5, color: 'from-amber-500/30 to-rose-500/20' },
-  { title: 'B-Sides & Rarities', year: 2022, type: 'Recopilatorio', tracks: 8, color: 'from-violet-500/30 to-cyan-500/20' },
-  { title: 'Live @ CDMX', year: 2023, type: 'Live', tracks: 10, color: 'from-rose-500/30 to-amber-500/20' },
+  { title: 'Sencillos 2024', year: 2024, type: 'Singles', tracks: 4, color: 'from-fuchsia-500/30 to-amber-500/20' },
+  { title: 'Desde las Montañas', year: 2022, type: 'EP', tracks: 6, color: 'from-amber-500/30 to-rose-500/20' },
+  { title: 'Trap Sessions', year: 2021, type: 'Mixtape', tracks: 8, color: 'from-violet-500/30 to-cyan-500/20' },
+  { title: 'Lo que caiga', year: 2020, type: 'EP', tracks: 5, color: 'from-rose-500/30 to-amber-500/20' },
 ]
 
 const SHOWS = [
-  { date: '15 NOV 2026', venue: 'Palacio de los Deportes', city: 'CDMX', status: 'Tickets' },
-  { date: '22 NOV 2026', venue: 'Auditorio Telmex', city: 'Guadalajara', status: 'Tickets' },
-  { date: '28 NOV 2026', venue: 'Arena Monterrey', city: 'Monterrey', status: 'Agotado' },
-  { date: '05 DIC 2026', venue: 'Teatro Solís', city: 'Montevideo', status: 'Tickets' },
-  { date: '12 DIC 2026', venue: 'Luna Park', city: 'Buenos Aires', status: 'Tickets' },
+  { date: '15 NOV 2026', venue: 'Teatro Mayor Julio Mario Santo Domingo', city: 'Bogotá, CO', status: 'Tickets' },
+  { date: '22 NOV 2026', venue: 'Plaza de Toros La Macarena', city: 'Medellín, CO', status: 'Tickets' },
+  { date: '28 NOV 2026', venue: 'Centro de Eventos Valle del Pacífico', city: 'Cali, CO', status: 'Agotado' },
+  { date: '05 DIC 2026', venue: 'Sala Romero', city: 'Quito, EC', status: 'Tickets' },
+  { date: '12 DIC 2026', venue: 'Teatro Gran Rex', city: 'Buenos Aires, AR', status: 'Tickets' },
+]
+
+const SERVICES = [
+  {
+    title: 'Producción de Reggaeton',
+    desc: 'Beats de reggaeton colombiano con mezcla y masterización profesional. Estilo moderno con esencia urbana.',
+    price: 'Desde $95 USD',
+  },
+  {
+    title: 'Producción de Trap',
+    desc: 'Instrumentales de trap latino con 808s pesados, melodías envolventes y estructura lista para cantar.',
+    price: 'Desde $95 USD',
+  },
+  {
+    title: 'Composición y Letras',
+    desc: 'Escritura de canciones en español para reggaeton, trap, R&B o rap. Hook pegadizo garantizado.',
+    price: 'Desde $120 USD',
+  },
 ]
 
 /* ============================================================
@@ -490,14 +520,16 @@ function Hero() {
    ============================================================ */
 function Marquee() {
   const items = [
-    'Synth-Pop',
-    'Alt-Electrónica',
-    'Cantautora',
-    'Productora',
-    'Live Performer',
-    '2x Grammy Latino Nom.',
-    '12 países',
-    '+50M Streams',
+    'Reggaeton',
+    'Trap',
+    'Urbano Latino',
+    'Productor',
+    'Cantautor',
+    'Desde Colombia',
+    '+14 años de carrera',
+    'La música no tiene límites',
+    'Disponible en Shazam',
+    'Spotify · YouTube',
   ]
   return (
     <div className="relative border-y border-white/5 bg-card/40 py-5 overflow-hidden">
@@ -527,8 +559,8 @@ function History() {
       <div className="mx-auto max-w-7xl px-6 md:px-8">
         <SectionHeading
           kicker="Historia"
-          title="El viaje de una voz"
-          description="Desde maquetas caseras hasta escenarios internacionales. Cada hito es una canción más en la banda sonora de su carrera."
+          title="Desde las montañas de Colombia"
+          description="Más de 14 años haciendo música sin límites. Una trayectoria construida desde el estudio casero hasta las plataformas digitales globales."
         />
 
         <div className="grid lg:grid-cols-[1fr_1.2fr] gap-12 lg:gap-20 items-start">
@@ -556,7 +588,7 @@ function History() {
               {/* Sello giratorio */}
               <div className="absolute top-5 right-5 h-16 w-16 rounded-full glass flex items-center justify-center animate-spin-slow">
                 <span className="font-display text-[10px] tracking-widest text-primary/80">
-                  ★ LUNA ★
+                  ★ ALFRED ★
                 </span>
               </div>
             </div>
@@ -570,9 +602,9 @@ function History() {
             >
               <Quote className="h-6 w-6 text-primary flex-shrink-0 mt-1" />
               <p className="font-serif-display italic text-sm md:text-base text-foreground/80 leading-relaxed">
-                "Luna no canta canciones: pinta paisajes emocionales con sintetizadores y voz."
+                "Desde las montañas de Colombia soy Alfred White. Hago reggaeton, trap y de todo lo que caiga. La música no tiene límites."
                 <span className="block mt-2 not-italic text-xs text-muted-foreground">
-                  — Rolling Stone ES
+                  — Alfred White, bio oficial (Songstats)
                 </span>
               </p>
             </motion.div>
@@ -622,9 +654,9 @@ function History() {
               className="mt-12 grid grid-cols-3 gap-4"
             >
               {[
-                { value: '50M+', label: 'Streams' },
-                { value: '12', label: 'Países' },
-                { value: '2x', label: 'Nominaciones' },
+                { value: '+14', label: 'Años de carrera' },
+                { value: '3', label: 'Géneros' },
+                { value: 'L1', label: 'Fiverr Seller' },
               ].map((stat) => (
                 <div
                   key={stat.label}
@@ -641,6 +673,58 @@ function History() {
             </motion.div>
           </div>
         </div>
+
+        {/* Bio extendida */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: '-80px' }}
+          transition={{ duration: 0.7 }}
+          className="mt-16 md:mt-24 grid md:grid-cols-3 gap-6"
+        >
+          <div className="md:col-span-2 glass rounded-3xl p-6 md:p-8">
+            <div className="flex items-center gap-3 mb-4">
+              <Equalizer bars={4} className="h-3" />
+              <span className="text-xs uppercase tracking-[0.3em] text-primary/80 font-medium">
+                Biografía
+              </span>
+            </div>
+            <p className="text-base md:text-lg text-foreground/85 leading-relaxed">
+              {ARTIST.bioLong}
+            </p>
+            <p className="mt-4 text-base md:text-lg text-foreground/85 leading-relaxed">
+              Su presencia en plataformas como <strong className="text-primary">Shazam</strong>,{' '}
+              <strong className="text-primary">Songstats</strong>, <strong className="text-primary">Spotify</strong>{' '}
+              y <strong className="text-primary">YouTube</strong> lo confirma como un artista en constante crecimiento.
+              Como <strong className="text-primary">Level 1 Seller en Fiverr</strong>, también produce para artistas
+              de todo el mundo, demostrando que su versatilidad va más allá de lo propio.
+            </p>
+          </div>
+          <div className="glass rounded-3xl p-6 md:p-8 flex flex-col justify-between">
+            <div>
+              <div className="text-xs uppercase tracking-[0.3em] text-primary/80 font-medium mb-3">
+                Plataformas
+              </div>
+              <ul className="space-y-3">
+                {[
+                  { name: 'Shazam', note: 'Reconocimiento de canciones' },
+                  { name: 'Songstats', note: 'Analytics de artista' },
+                  { name: 'Spotify', note: 'Streaming oficial' },
+                  { name: 'YouTube', note: 'Videos musicales' },
+                  { name: 'Fiverr', note: 'Servicios de producción' },
+                ].map((p) => (
+                  <li key={p.name} className="flex items-start gap-3">
+                    <span className="mt-2 h-1.5 w-1.5 rounded-full bg-gradient-to-r from-amber-400 to-fuchsia-500 flex-shrink-0" />
+                    <div>
+                      <div className="text-sm font-medium text-foreground">{p.name}</div>
+                      <div className="text-xs text-muted-foreground">{p.note}</div>
+                    </div>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </motion.div>
       </div>
     </section>
   )
@@ -1046,6 +1130,95 @@ function UpcomingShows() {
 }
 
 /* ============================================================
+   SECCIÓN: Servicios de Producción (Fiverr)
+   ============================================================ */
+function ProductionServices() {
+  return (
+    <section id="servicios" className="relative py-24 md:py-32 noise-overlay">
+      <div className="mx-auto max-w-7xl px-6 md:px-8">
+        <SectionHeading
+          kicker="Producción · Fiverr"
+          title="Servicios a medida"
+          description="Alfred White es también Level 1 Seller en Fiverr. Contrata sus servicios de producción musical para tu próximo lanzamiento."
+        />
+
+        <div className="grid md:grid-cols-3 gap-5">
+          {SERVICES.map((service, i) => (
+            <motion.div
+              key={service.title}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: '-50px' }}
+              transition={{ duration: 0.6, delay: i * 0.12 }}
+              whileHover={{ y: -8 }}
+              className="group relative rounded-3xl glass p-6 md:p-7 glow-border"
+            >
+              {/* Icono decorativo */}
+              <div className="relative h-12 w-12 rounded-2xl bg-gradient-to-br from-amber-400/30 to-fuchsia-500/30 flex items-center justify-center mb-5">
+                <Disc3 className="h-5 w-5 text-primary group-hover:rotate-180 transition-transform duration-700" />
+                <div className="absolute inset-0 rounded-2xl ring-1 ring-amber-400/30 animate-pulse-glow" />
+              </div>
+
+              <h3 className="font-serif-display text-xl md:text-2xl text-foreground mb-2">
+                {service.title}
+              </h3>
+              <p className="text-sm text-muted-foreground leading-relaxed mb-5">
+                {service.desc}
+              </p>
+
+              <div className="flex items-center justify-between">
+                <span className="text-sm font-medium text-gold-gradient font-display text-lg tracking-wider">
+                  {service.price}
+                </span>
+                <Button
+                  size="sm"
+                  variant="outline"
+                  className="rounded-full border-white/20 text-foreground hover:bg-white/5 text-xs"
+                  onClick={() => window.open(ARTIST.social.fiverr, '_blank')}
+                >
+                  Contratar
+                  <ArrowUpRight className="ml-1 h-3 w-3" />
+                </Button>
+              </div>
+            </motion.div>
+          ))}
+        </div>
+
+        {/* CTA inferior */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="mt-10 flex flex-col sm:flex-row items-center justify-between gap-4 glass rounded-3xl p-6 md:p-7"
+        >
+          <div className="flex items-center gap-4">
+            <div className="h-11 w-11 rounded-xl bg-gradient-to-br from-amber-400/40 to-fuchsia-500/40 flex items-center justify-center">
+              <Mic2 className="h-5 w-5 text-foreground" />
+            </div>
+            <div>
+              <p className="font-serif-display text-lg text-foreground">
+                ¿Necesitas un beat personalizado?
+              </p>
+              <p className="text-sm text-muted-foreground">
+                Level 1 Seller en Fiverr · +14 años de experiencia · Respuesta en 24h
+              </p>
+            </div>
+          </div>
+          <Button
+            className="rounded-full bg-gradient-to-r from-amber-400 to-fuchsia-500 text-background hover:opacity-90 px-6"
+            onClick={() => window.open(ARTIST.social.fiverr, '_blank')}
+          >
+            Ver perfil en Fiverr
+            <ArrowUpRight className="ml-2 h-4 w-4" />
+          </Button>
+        </motion.div>
+      </div>
+    </section>
+  )
+}
+
+/* ============================================================
    SECCIÓN: Booking / Contacto
    ============================================================ */
 function Booking() {
@@ -1071,8 +1244,8 @@ function Booking() {
           <div>
             <SectionHeading
               kicker="Booking"
-              title="Lleva a LUNA a tu escenario"
-              description="Contrataciones, prensa, colaboraciones y prensa. Cuéntanos sobre tu proyecto y te responderemos a la brevedad."
+              title="Lleva a Alfred a tu escenario"
+              description="Contrataciones, prensa, colaboraciones y producciones a medida. Cuéntanos sobre tu proyecto y te responderemos a la brevedad."
             />
 
             <div className="space-y-4 mt-8">
@@ -1318,6 +1491,7 @@ export default function Home() {
         <PhotoGallery />
         <MusicVideos />
         <Discography />
+        <ProductionServices />
         <UpcomingShows />
         <Booking />
       </main>
