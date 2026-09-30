@@ -13,6 +13,7 @@ import {
   MapPin,
   Instagram,
   Youtube,
+  Facebook,
   Mail,
   Phone,
   ArrowUpRight,
@@ -81,17 +82,18 @@ const ARTIST = {
     'Paisa de pura sepa. Reggaetón y trap de todos los estilos. Haciendo música desde hace más de 10 años porque es lo que le gusta, y lo seguirá haciendo hasta que se muera.',
   bioLong:
     'Alfred White es un artista paisa de pura sepa, nacido en las montañas de Antioquia, Colombia. Con más de 10 años de trayectoria, hace reggaetón y trap de todos los estilos, sin limitarse a un solo sonido. Su filosofía es clara: "Hago música porque es lo que me gusta, y lo seguiré haciendo hasta que me muera". Su canción "Bakanora" ha superado las 25,000 reproducciones en Spotify, y colabora frecuentemente con artistas como Juan Roldan y Hamil, llevando el sonido colombiano a toda Latinoamérica.',
-  email: 'booking@alfredwhite.music',
+  email: 'alfredwhitebooking@gmail.com',
   phone: '+57 300 000 0000',
   social: {
-    instagram: 'https://www.instagram.com/alfredwhite',
+    instagram: 'https://www.instagram.com/alfredwhiteco',
+    facebook: 'https://www.facebook.com/alfredo.cartagena.37',
     youtube: 'https://www.youtube.com/@alfredwhiteco',
     youtubeChannel: 'https://www.youtube.com/channel/UCkh8bPyHjV6Ax7yPM_eCMug',
     spotify: 'https://open.spotify.com/artist/51GuS1Zdn16Rr5h8JL0v3x',
     shazam: 'https://www.shazam.com/',
     songstats: 'https://songstats.com/',
     fiverr: 'https://www.fiverr.com/',
-    tiktok: 'https://www.tiktok.com/@alfredwhiteco',
+    tiktok: 'https://www.tiktok.com/@alfredwhiteelparcero',
     appleMusic: 'https://music.apple.com/',
     deezer: 'https://www.deezer.com/',
   },
@@ -137,14 +139,14 @@ const TIMELINE = [
 ]
 
 const PHOTOS = [
-  { id: 1, caption: 'Sesión retrato', ratio: 'tall' },
-  { id: 2, caption: 'En el estudio', ratio: 'wide' },
-  { id: 3, caption: 'Montañas de Antioquia', ratio: 'square' },
-  { id: 4, caption: 'Live session', ratio: 'tall' },
-  { id: 5, caption: 'Behind the scenes', ratio: 'square' },
-  { id: 6, caption: 'Sesión urbana', ratio: 'wide' },
-  { id: 7, caption: 'Cover art', ratio: 'tall' },
-  { id: 8, caption: 'Ensayos', ratio: 'square' },
+  { id: 1, caption: '-0 (Video Oficial)', ratio: 'tall', src: '/photos/yt_aDrrZB0hOfA.jpg' },
+  { id: 2, caption: 'Bakanora', ratio: 'wide', src: '/photos/yt_wkoGx0YyZBQ.jpg' },
+  { id: 3, caption: 'Tentacion X Juan Roldan', ratio: 'square', src: '/photos/yt_0B00IbU6F08.jpg' },
+  { id: 4, caption: 'Soy Nada', ratio: 'tall', src: '/photos/yt_kC7GvnraUpE.jpg' },
+  { id: 5, caption: 'Lokura X Gabyl', ratio: 'square', src: '/photos/yt_I5WYssqLI54.jpg' },
+  { id: 6, caption: 'Segundo Intento', ratio: 'wide', src: '/photos/yt_D78OU0V-pAI.jpg' },
+  { id: 7, caption: 'Trampa', ratio: 'tall', src: '/photos/yt_vO1w6dhGJ8o.jpg' },
+  { id: 8, caption: 'Para Qué Huir', ratio: 'square', src: '/photos/yt_PQvgxLGSFGo.jpg' },
 ]
 
 const VIDEOS = [
@@ -620,16 +622,14 @@ function History() {
             className="relative"
           >
             <div className="relative aspect-[3/4] rounded-3xl overflow-hidden glow-border group">
-              {/* Placeholder reemplazable */}
-              <div className="absolute inset-0 bg-gradient-to-br from-fuchsia-500/30 via-violet-700/30 to-amber-500/20" />
-              <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,oklch(0.85_0.15_75_/_30%),transparent_50%)]" />
-              <div className="absolute inset-0 flex flex-col items-center justify-center text-center p-8">
-                <Camera className="h-10 w-10 text-foreground/50 mb-3" />
-                <p className="text-sm text-foreground/60 font-medium">
-                  Reemplaza por tu foto principal
-                </p>
-                <p className="text-xs text-foreground/40 mt-1">600 × 800 px · JPG / PNG</p>
-              </div>
+              {/* Foto real de Alfred White (perfil de Facebook + YouTube) */}
+              <img
+                src="/photos/yt_channel_avatar.jpg"
+                alt="Alfred White - Foto oficial del artista"
+                className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+              />
+              {/* Overlay gradient para legibilidad */}
+              <div className="absolute inset-0 bg-gradient-to-t from-background/70 via-transparent to-background/20" />
               {/* Frame decorativo */}
               <div className="absolute inset-3 border border-white/10 rounded-2xl pointer-events-none" />
               {/* Sello giratorio */}
@@ -756,10 +756,10 @@ function History() {
                 {[
                   { name: 'Spotify', note: '309 oyentes/mes · Bakanora 25K+', url: ARTIST.social.spotify },
                   { name: 'YouTube', note: 'Canal @alfredwhiteco · 18+ videos', url: ARTIST.social.youtube },
-                  { name: 'Instagram', note: '@alfredwhite · cuenta oficial', url: ARTIST.social.instagram },
-                  { name: 'TikTok', note: '@alfredwhiteco', url: ARTIST.social.tiktok },
+                  { name: 'Instagram', note: '@alfredwhiteco', url: ARTIST.social.instagram },
+                  { name: 'Facebook', note: 'Alfred White (alfredo.cartagena.37)', url: ARTIST.social.facebook },
+                  { name: 'TikTok', note: '@alfredwhiteelparcero', url: ARTIST.social.tiktok },
                   { name: 'Shazam', note: 'Reconocimiento de canciones', url: ARTIST.social.shazam },
-                  { name: 'Songstats', note: 'Analytics de artista', url: ARTIST.social.songstats },
                 ].map((p) => (
                   <li key={p.name}>
                     <a
@@ -824,18 +824,18 @@ function PhotoGallery() {
               onClick={() => setSelected(photo.id)}
               className={`group relative overflow-hidden rounded-2xl ${ratioClass(
                 photo.ratio
-              )} glow-border`}
+              )} glow-border bg-card`}
             >
-              <div className="absolute inset-0 bg-gradient-to-br from-fuchsia-500/30 via-violet-700/30 to-amber-500/20 transition-transform duration-700 group-hover:scale-110" />
-              <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_30%,oklch(0.85_0.15_75_/_20%),transparent_50%)]" />
+              {/* Imagen real */}
+              <img
+                src={photo.src}
+                alt={`Alfred White - ${photo.caption}`}
+                className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                loading="lazy"
+              />
 
-              {/* Placeholder overlay */}
-              <div className="absolute inset-0 flex flex-col items-center justify-center text-center p-4">
-                <Camera className="h-6 w-6 text-foreground/40 mb-2 transition-opacity group-hover:opacity-0" />
-                <p className="text-[10px] uppercase tracking-widest text-foreground/40 transition-opacity group-hover:opacity-0">
-                  Foto {photo.id}
-                </p>
-              </div>
+              {/* Overlay gradient para legibilidad */}
+              <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent opacity-60 group-hover:opacity-90 transition-opacity duration-500" />
 
               {/* Hover overlay */}
               <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-4">
@@ -863,7 +863,7 @@ function PhotoGallery() {
           transition={{ duration: 0.6, delay: 0.3 }}
           className="mt-8 text-center text-xs text-muted-foreground"
         >
-          ✦ Reemplaza cada tarjeta con tu propia foto · Tamaño recomendado: 1200 × 1500 px
+          ✦ Imágenes reales extraídas de los videos oficiales de Alfred White en YouTube
         </motion.p>
       </div>
 
@@ -889,16 +889,19 @@ function PhotoGallery() {
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.85, opacity: 0 }}
               transition={{ duration: 0.3 }}
-              className="relative w-full max-w-3xl aspect-[3/4] rounded-3xl overflow-hidden glow-border"
+              className="relative w-full max-w-3xl rounded-3xl overflow-hidden glow-border"
               onClick={(e) => e.stopPropagation()}
             >
-              <div className="absolute inset-0 bg-gradient-to-br from-fuchsia-500/40 via-violet-700/40 to-amber-500/30" />
-              <div className="absolute inset-0 flex flex-col items-center justify-center text-center">
-                <Camera className="h-12 w-12 text-foreground/40 mb-3" />
-                <p className="text-sm text-foreground/60">
-                  Aquí se mostraría la foto ampliada
+              <img
+                src={PHOTOS.find((p) => p.id === selected)?.src}
+                alt={`Alfred White - ${PHOTOS.find((p) => p.id === selected)?.caption}`}
+                className="w-full h-auto object-contain max-h-[85vh]"
+              />
+              <div className="absolute bottom-0 inset-x-0 p-6 bg-gradient-to-t from-background via-background/80 to-transparent">
+                <p className="text-xs uppercase tracking-widest text-primary/80 mb-1">
+                  Alfred White
                 </p>
-                <p className="text-xs text-foreground/40 mt-2">
+                <p className="font-serif-display text-xl text-foreground">
                   {PHOTOS.find((p) => p.id === selected)?.caption}
                 </p>
               </div>
@@ -933,13 +936,19 @@ function MusicVideos() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: '-50px' }}
               transition={{ duration: 0.6, delay: i * 0.12 }}
-              className="group relative rounded-3xl overflow-hidden glow-border cursor-pointer"
+              className="group relative rounded-3xl overflow-hidden glow-border cursor-pointer bg-card"
               onClick={() => setActive(video.id)}
             >
-              {/* Aspecto 16:9 */}
-              <div className="relative aspect-video">
-                <div className="absolute inset-0 bg-gradient-to-br from-fuchsia-500/30 via-violet-800/30 to-amber-500/20 group-hover:scale-105 transition-transform duration-700" />
-                <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_70%,oklch(0.85_0.15_75_/_25%),transparent_60%)]" />
+              {/* Aspecto 16:9 con miniatura real de YouTube */}
+              <div className="relative aspect-video overflow-hidden">
+                <img
+                  src={`https://img.youtube.com/vi/${video.youtubeId}/hqdefault.jpg`}
+                  alt={`${video.title} - Alfred White`}
+                  className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                  loading="lazy"
+                />
+                {/* Overlay oscuro para legibilidad */}
+                <div className="absolute inset-0 bg-gradient-to-t from-background/60 via-transparent to-background/30" />
 
                 {/* Botón play */}
                 <div className="absolute inset-0 flex items-center justify-center">
@@ -961,7 +970,7 @@ function MusicVideos() {
 
                 {/* Video icon */}
                 <div className="absolute top-3 right-3">
-                  <Video className="h-4 w-4 text-foreground/40" />
+                  <Video className="h-4 w-4 text-foreground/60 drop-shadow-lg" />
                 </div>
               </div>
 
@@ -971,7 +980,7 @@ function MusicVideos() {
                   <h3 className="font-serif-display text-base md:text-lg text-foreground">
                     {video.title}
                   </h3>
-                  <p className="text-xs text-muted-foreground mt-0.5">Video musical</p>
+                  <p className="text-xs text-muted-foreground mt-0.5">Video oficial</p>
                 </div>
                 <ArrowUpRight className="h-4 w-4 text-primary/60 group-hover:text-primary group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all" />
               </div>
@@ -986,12 +995,12 @@ function MusicVideos() {
           className="mt-8 text-center"
         >
           <p className="text-xs text-muted-foreground">
-            ✦ Edita el array <code className="text-primary/80">VIDEOS</code> en el código para reemplazar con tus IDs de YouTube
+            ✦ Videos oficiales reales del canal YouTube de Alfred White · Click para reproducir
           </p>
         </motion.div>
       </div>
 
-      {/* Modal reproductor */}
+      {/* Modal reproductor con autoplay */}
       <AnimatePresence>
         {active !== null && (
           <motion.div
@@ -1019,9 +1028,9 @@ function MusicVideos() {
               <iframe
                 src={`https://www.youtube.com/embed/${
                   VIDEOS.find((v) => v.id === active)?.youtubeId
-                }?autoplay=1`}
-                title="Reproductor"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                }?autoplay=1&mute=0&rel=0&modestbranding=1`}
+                title="Reproductor de Alfred White"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 allowFullScreen
                 className="absolute inset-0 w-full h-full"
               />
@@ -1348,10 +1357,11 @@ function Booking() {
               </p>
               <div className="flex flex-wrap gap-3">
                 {[
-                  { icon: Instagram, href: ARTIST.social.instagram, label: 'Instagram @alfredwhite' },
+                  { icon: Instagram, href: ARTIST.social.instagram, label: 'Instagram @alfredwhiteco' },
                   { icon: Youtube, href: ARTIST.social.youtube, label: 'YouTube @alfredwhiteco' },
                   { icon: Spotify, href: ARTIST.social.spotify, label: 'Spotify Alfred White' },
-                  { icon: TikTok, href: ARTIST.social.tiktok, label: 'TikTok @alfredwhiteco' },
+                  { icon: TikTok, href: ARTIST.social.tiktok, label: 'TikTok @alfredwhiteelparcero' },
+                  { icon: Facebook, href: ARTIST.social.facebook, label: 'Facebook Alfred White' },
                 ].map((social) => (
                   <a
                     key={social.label}
@@ -1506,6 +1516,7 @@ function Footer() {
               { icon: Youtube, href: ARTIST.social.youtube, label: 'YouTube' },
               { icon: Spotify, href: ARTIST.social.spotify, label: 'Spotify' },
               { icon: TikTok, href: ARTIST.social.tiktok, label: 'TikTok' },
+              { icon: Facebook, href: ARTIST.social.facebook, label: 'Facebook' },
             ].map((social) => (
               <a
                 key={social.label}
