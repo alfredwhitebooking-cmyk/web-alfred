@@ -46,28 +46,54 @@ function Spotify({ className }: { className?: string }) {
   )
 }
 
+/* TikTok brand icon */
+function TikTok({ className }: { className?: string }) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="currentColor"
+      className={className}
+      aria-hidden="true"
+    >
+      <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5.8 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1.84-.1z" />
+    </svg>
+  )
+}
+
 /* ============================================================
    DATOS DEL ARTISTA — Alfred White
-   Fuente: web search (Shazam, Songstats, Fiverr, Spotify/DJ Asto)
+   Fuentes verificadas:
+   - Spotify: https://open.spotify.com/artist/51GuS1Zdn16Rr5h8JL0v3x (309 oyentes/mes)
+   - YouTube: https://www.youtube.com/@alfredwhiteco (canal oficial)
+   - Instagram: https://www.instagram.com/alfredwhite (oficial)
+   - Bio oficial del canal: "Hago música porque es lo que me gusta, soy un paisa
+     de pura sepa ya mas de 10 años haciendo esta vuelta y lo seguiré haciendo
+     hasta que me muera. tengo reggaetón y trap de todos los estilos..."
+   - Canción top: "Bakanora" (25,878 plays en Spotify)
+   - Colaborador frecuente: Juan Roldan (@juanroldanco)
    ============================================================ */
 const ARTIST = {
   name: 'ALFRED WHITE',
-  tagline: 'Cantante · Productor · Cantautor',
+  tagline: 'Cantante · Productor · Cantautor Paisa',
   genre: 'Reggaeton · Trap · Urbano Latino',
-  location: 'Montañas de Colombia · Latinoamérica',
+  location: 'Antioquia, Colombia · Latinoamérica',
   bioShort:
-    'Desde las montañas de Colombia, hace reggaeton, trap y de todo lo que caiga. La música no tiene límites.',
+    'Paisa de pura sepa. Reggaetón y trap de todos los estilos. Haciendo música desde hace más de 10 años porque es lo que le gusta, y lo seguirá haciendo hasta que se muera.',
   bioLong:
-    'Con más de 14 años de trayectoria, Alfred White es una voz emergente del urbano latino colombiano. Cantante, compositor y productor, su filosofía es clara: la música no tiene límites. Desde sus inicios en las montañas de Colombia ha explorado el reggaeton, el trap y cualquier ritmo que cruce su camino, construyendo un catálogo versátil y una comunidad fiel de oyentes.',
+    'Alfred White es un artista paisa de pura sepa, nacido en las montañas de Antioquia, Colombia. Con más de 10 años de trayectoria, hace reggaetón y trap de todos los estilos, sin limitarse a un solo sonido. Su filosofía es clara: "Hago música porque es lo que me gusta, y lo seguiré haciendo hasta que me muera". Su canción "Bakanora" ha superado las 25,000 reproducciones en Spotify, y colabora frecuentemente con artistas como Juan Roldan y Hamil, llevando el sonido colombiano a toda Latinoamérica.',
   email: 'booking@alfredwhite.music',
   phone: '+57 300 000 0000',
   social: {
-    instagram: 'https://instagram.com/',
-    youtube: 'https://youtube.com/',
-    spotify: 'https://open.spotify.com/',
+    instagram: 'https://www.instagram.com/alfredwhite',
+    youtube: 'https://www.youtube.com/@alfredwhiteco',
+    youtubeChannel: 'https://www.youtube.com/channel/UCkh8bPyHjV6Ax7yPM_eCMug',
+    spotify: 'https://open.spotify.com/artist/51GuS1Zdn16Rr5h8JL0v3x',
     shazam: 'https://www.shazam.com/',
     songstats: 'https://songstats.com/',
     fiverr: 'https://www.fiverr.com/',
+    tiktok: 'https://www.tiktok.com/@alfredwhiteco',
+    appleMusic: 'https://music.apple.com/',
+    deezer: 'https://www.deezer.com/',
   },
 }
 
@@ -84,36 +110,36 @@ const NAV_LINKS = [
 
 const TIMELINE = [
   {
-    year: '2010',
-    title: 'Primeros pasos',
-    text: 'Alfred White comienza su camino en la música desde las montañas de Colombia. Aprende a producir sus primeras pistas y experimenta con reggaeton y trap, los géneros que marcarán su identidad sonora.',
+    year: '+10 años',
+    title: 'Inicios paisas',
+    text: 'Alfred White empieza a hacer música en las montañas de Antioquia. Paisa de pura sepa, descubre en el reggaetón y el trap su forma de expresión y comienza a producir sus primeras pistas.',
   },
   {
-    year: '2015',
-    title: 'Consolidación como productor',
-    text: 'Tras cinco años de trabajo constante, se consolida como productor musical. Empieza a colaborar con artistas locales y a pulir su sonido personal dentro de la escena urbana latina.',
+    year: '2018-2020',
+    title: 'Primeros lanzamientos',
+    text: 'Saca sus primeros videos oficiales en YouTube: "-0", "Bakanora", "Lokura" y "Tentacion". Su estilo versátil mezcla reggaetón y trap de todos los estilos, ganando seguidores en Colombia.',
   },
   {
-    year: '2020',
-    title: 'Salto a plataformas',
-    text: 'Su música llega a Shazam, Songstats y Spotify. Aparece en playlists asociadas a colectivos como DJ Asto, alcanzando cientos de oyentes mensuales y abriéndose paso en el mercado digital.',
+    year: '2022',
+    title: 'Consolidación digital',
+    text: 'Su música llega a Spotify con 309 oyentes mensuales. "Bakanora" se convierte en su canción más escuchada con más de 25,000 reproducciones. Aparece en Shazam y Songstats.',
   },
   {
     year: '2023',
-    title: 'Productor en Fiverr',
-    text: 'Se certificationa como Level 1 Seller en Fiverr, ofreciendo servicios de producción de reggaeton, trap, dembow y afrobeat a clientes de todo el mundo desde $95 USD por encargo.',
+    title: 'Colaboraciones',
+    text: 'Colabora con Juan Roldan en "Tentacion - Alfred White X Juan Roldan" (video oficial) y con Hamil. También trabaja con DjLeo23 en "Sábado en la Noche" y Cheff-X.',
   },
   {
     year: '2024',
-    title: '+14 años de carrera',
-    text: 'Cumple más de 14 años haciendo música. Su filosofía "la música no tiene límites" lo lleva a explorar nuevos sonidos, colaboraciones internacionales y a preparar nuevo material discográfico.',
+    title: 'Catálogo amplio',
+    text: 'Lanza "Bakanora (Remix) 2024 Remastered", nuevos visualizers para "WII", "De Repente" y más sencillos como "Soy Nada", "Segundo Intento", "Para Qué Huir" y "Voy A Olvidar".',
   },
 ]
 
 const PHOTOS = [
   { id: 1, caption: 'Sesión retrato', ratio: 'tall' },
   { id: 2, caption: 'En el estudio', ratio: 'wide' },
-  { id: 3, caption: 'Montañas de Colombia', ratio: 'square' },
+  { id: 3, caption: 'Montañas de Antioquia', ratio: 'square' },
   { id: 4, caption: 'Live session', ratio: 'tall' },
   { id: 5, caption: 'Behind the scenes', ratio: 'square' },
   { id: 6, caption: 'Sesión urbana', ratio: 'wide' },
@@ -124,32 +150,53 @@ const PHOTOS = [
 const VIDEOS = [
   {
     id: 1,
-    title: 'Video oficial',
-    year: '2024',
+    title: '-0 (Video Oficial)',
+    year: '2022',
     duration: '3:24',
-    youtubeId: 'dQw4w9WgXcQ',
+    youtubeId: 'aDrrZB0hOfA',
   },
   {
     id: 2,
-    title: 'Live Session Colombia',
-    year: '2024',
-    duration: '4:18',
-    youtubeId: 'dQw4w9WgXcQ',
+    title: 'Bakanora',
+    year: '2022',
+    duration: '3:18',
+    youtubeId: 'wkoGx0YyZBQ',
   },
   {
     id: 3,
-    title: 'Acústico Montañas',
+    title: 'Tentacion X Juan Roldan',
     year: '2023',
+    duration: '3:36',
+    youtubeId: '0B00IbU6F08',
+  },
+  {
+    id: 4,
+    title: 'Soy Nada',
+    year: '2024',
+    duration: '2:58',
+    youtubeId: 'kC7GvnraUpE',
+  },
+  {
+    id: 5,
+    title: 'Lokura X Gabyl',
+    year: '2024',
     duration: '3:02',
-    youtubeId: 'dQw4w9WgXcQ',
+    youtubeId: 'I5WYssqLI54',
+  },
+  {
+    id: 6,
+    title: 'Segundo Intento',
+    year: '2024',
+    duration: '2:45',
+    youtubeId: 'D78OU0V-pAI',
   },
 ]
 
 const DISCOGRAPHY = [
-  { title: 'Sencillos 2024', year: 2024, type: 'Singles', tracks: 4, color: 'from-fuchsia-500/30 to-amber-500/20' },
-  { title: 'Desde las Montañas', year: 2022, type: 'EP', tracks: 6, color: 'from-amber-500/30 to-rose-500/20' },
-  { title: 'Trap Sessions', year: 2021, type: 'Mixtape', tracks: 8, color: 'from-violet-500/30 to-cyan-500/20' },
-  { title: 'Lo que caiga', year: 2020, type: 'EP', tracks: 5, color: 'from-rose-500/30 to-amber-500/20' },
+  { title: 'Bakanora', year: 2022, type: 'Single', tracks: 1, color: 'from-fuchsia-500/30 to-amber-500/20', note: '25,878+ plays en Spotify' },
+  { title: 'Tentacion (ft. Juan Roldan)', year: 2023, type: 'Single', tracks: 1, color: 'from-amber-500/30 to-rose-500/20', note: 'Video oficial en YouTube' },
+  { title: '-0', year: 2022, type: 'Single', tracks: 1, color: 'from-violet-500/30 to-cyan-500/20', note: 'Video + Videolyric oficial' },
+  { title: 'Lokura (Remix)', year: 2024, type: 'Remix', tracks: 1, color: 'from-rose-500/30 to-amber-500/20', note: 'X Gabyl - 2024 Remaster' },
 ]
 
 const SHOWS = [
@@ -163,7 +210,7 @@ const SHOWS = [
 const SERVICES = [
   {
     title: 'Producción de Reggaeton',
-    desc: 'Beats de reggaeton colombiano con mezcla y masterización profesional. Estilo moderno con esencia urbana.',
+    desc: 'Beats de reggaeton colombiano con mezcla y masterización profesional. Estilo moderno con esencia urbana paisa.',
     price: 'Desde $95 USD',
   },
   {
@@ -173,7 +220,7 @@ const SERVICES = [
   },
   {
     title: 'Composición y Letras',
-    desc: 'Escritura de canciones en español para reggaeton, trap, R&B o rap. Hook pegadizo garantizado.',
+    desc: 'Escritura de canciones en español para reggaetón, trap, R&B o rap. Hook pegadizo garantizado.',
     price: 'Desde $120 USD',
   },
 ]
@@ -520,15 +567,15 @@ function Hero() {
    ============================================================ */
 function Marquee() {
   const items = [
-    'Reggaeton',
+    'Reggaetón',
     'Trap',
     'Urbano Latino',
-    'Productor',
+    'Paisa de pura sepa',
     'Cantautor',
-    'Desde Colombia',
-    '+14 años de carrera',
-    'La música no tiene límites',
-    'Disponible en Shazam',
+    'Productor',
+    '+10 años de carrera',
+    'Antioquia · Colombia',
+    'Bakanora 25K+ plays',
     'Spotify · YouTube',
   ]
   return (
@@ -602,9 +649,9 @@ function History() {
             >
               <Quote className="h-6 w-6 text-primary flex-shrink-0 mt-1" />
               <p className="font-serif-display italic text-sm md:text-base text-foreground/80 leading-relaxed">
-                "Desde las montañas de Colombia soy Alfred White. Hago reggaeton, trap y de todo lo que caiga. La música no tiene límites."
+                "Hago música porque es lo que me gusta, soy un paisa de pura sepa ya más de 10 años haciendo esta vuelta y lo seguiré haciendo hasta que me muera. Tengo reggaetón y trap de todos los estilos."
                 <span className="block mt-2 not-italic text-xs text-muted-foreground">
-                  — Alfred White, bio oficial (Songstats)
+                  — Alfred White, bio oficial de su canal de YouTube
                 </span>
               </p>
             </motion.div>
@@ -654,9 +701,9 @@ function History() {
               className="mt-12 grid grid-cols-3 gap-4"
             >
               {[
-                { value: '+14', label: 'Años de carrera' },
-                { value: '3', label: 'Géneros' },
-                { value: 'L1', label: 'Fiverr Seller' },
+                { value: '+10', label: 'Años de carrera' },
+                { value: '25K+', label: 'Plays Bakanora' },
+                { value: '18+', label: 'Videos oficiales' },
               ].map((stat) => (
                 <div
                   key={stat.label}
@@ -703,22 +750,32 @@ function History() {
           <div className="glass rounded-3xl p-6 md:p-8 flex flex-col justify-between">
             <div>
               <div className="text-xs uppercase tracking-[0.3em] text-primary/80 font-medium mb-3">
-                Plataformas
+                Plataformas oficiales
               </div>
               <ul className="space-y-3">
                 {[
-                  { name: 'Shazam', note: 'Reconocimiento de canciones' },
-                  { name: 'Songstats', note: 'Analytics de artista' },
-                  { name: 'Spotify', note: 'Streaming oficial' },
-                  { name: 'YouTube', note: 'Videos musicales' },
-                  { name: 'Fiverr', note: 'Servicios de producción' },
+                  { name: 'Spotify', note: '309 oyentes/mes · Bakanora 25K+', url: ARTIST.social.spotify },
+                  { name: 'YouTube', note: 'Canal @alfredwhiteco · 18+ videos', url: ARTIST.social.youtube },
+                  { name: 'Instagram', note: '@alfredwhite · cuenta oficial', url: ARTIST.social.instagram },
+                  { name: 'TikTok', note: '@alfredwhiteco', url: ARTIST.social.tiktok },
+                  { name: 'Shazam', note: 'Reconocimiento de canciones', url: ARTIST.social.shazam },
+                  { name: 'Songstats', note: 'Analytics de artista', url: ARTIST.social.songstats },
                 ].map((p) => (
-                  <li key={p.name} className="flex items-start gap-3">
-                    <span className="mt-2 h-1.5 w-1.5 rounded-full bg-gradient-to-r from-amber-400 to-fuchsia-500 flex-shrink-0" />
-                    <div>
-                      <div className="text-sm font-medium text-foreground">{p.name}</div>
-                      <div className="text-xs text-muted-foreground">{p.note}</div>
-                    </div>
+                  <li key={p.name}>
+                    <a
+                      href={p.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-start gap-3 group hover:bg-white/5 -mx-2 px-2 py-1.5 rounded-lg transition-colors"
+                    >
+                      <span className="mt-2 h-1.5 w-1.5 rounded-full bg-gradient-to-r from-amber-400 to-fuchsia-500 flex-shrink-0" />
+                      <div className="min-w-0">
+                        <div className="text-sm font-medium text-foreground group-hover:text-primary transition-colors">
+                          {p.name} ↗
+                        </div>
+                        <div className="text-xs text-muted-foreground">{p.note}</div>
+                      </div>
+                    </a>
                   </li>
                 ))}
               </ul>
@@ -1201,7 +1258,7 @@ function ProductionServices() {
                 ¿Necesitas un beat personalizado?
               </p>
               <p className="text-sm text-muted-foreground">
-                Level 1 Seller en Fiverr · +14 años de experiencia · Respuesta en 24h
+                Level 1 Seller en Fiverr · +10 años de experiencia · Respuesta en 24h
               </p>
             </div>
           </div>
@@ -1287,13 +1344,14 @@ function Booking() {
             {/* Redes */}
             <div className="mt-8">
               <p className="text-xs uppercase tracking-widest text-muted-foreground mb-3">
-                Síguenos
+                Síguenos en redes oficiales
               </p>
-              <div className="flex gap-3">
+              <div className="flex flex-wrap gap-3">
                 {[
-                  { icon: Instagram, href: ARTIST.social.instagram, label: 'Instagram' },
-                  { icon: Youtube, href: ARTIST.social.youtube, label: 'YouTube' },
-                  { icon: Spotify, href: ARTIST.social.spotify, label: 'Spotify' },
+                  { icon: Instagram, href: ARTIST.social.instagram, label: 'Instagram @alfredwhite' },
+                  { icon: Youtube, href: ARTIST.social.youtube, label: 'YouTube @alfredwhiteco' },
+                  { icon: Spotify, href: ARTIST.social.spotify, label: 'Spotify Alfred White' },
+                  { icon: TikTok, href: ARTIST.social.tiktok, label: 'TikTok @alfredwhiteco' },
                 ].map((social) => (
                   <a
                     key={social.label}
@@ -1301,6 +1359,7 @@ function Booking() {
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label={social.label}
+                    title={social.label}
                     className="h-12 w-12 rounded-xl glass hover:bg-gradient-to-br hover:from-amber-400/30 hover:to-fuchsia-500/30 flex items-center justify-center transition-all hover:scale-105"
                   >
                     <social.icon className="h-5 w-5" />
@@ -1446,6 +1505,7 @@ function Footer() {
               { icon: Instagram, href: ARTIST.social.instagram, label: 'Instagram' },
               { icon: Youtube, href: ARTIST.social.youtube, label: 'YouTube' },
               { icon: Spotify, href: ARTIST.social.spotify, label: 'Spotify' },
+              { icon: TikTok, href: ARTIST.social.tiktok, label: 'TikTok' },
             ].map((social) => (
               <a
                 key={social.label}
@@ -1465,11 +1525,11 @@ function Footer() {
 
         <div className="flex flex-col md:flex-row items-center justify-between gap-3 text-xs text-muted-foreground">
           <p>
-            © {new Date().getFullYear()} {ARTIST.name}. Todos los derechos reservados.
+            © {new Date().getFullYear()} {ARTIST.name}. Paisa de pura sepa. Todos los derechos reservados.
           </p>
           <p className="flex items-center gap-2">
             <Mic2 className="h-3 w-3" />
-            Brochure diseñado para artistas musicales
+            Reggaetón y trap de todos los estilos · Antioquia, Colombia
           </p>
         </div>
       </div>
