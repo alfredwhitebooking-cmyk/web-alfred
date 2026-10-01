@@ -82,7 +82,7 @@ function WhatsApp({ className }: { className?: string }) {
 // Logo oficial de YouTube (botón rojo + wordmark)
 function YouTubeLogo({ className = '', showText = true }: { className?: string; showText?: boolean }) {
   return (
-    <svg viewBox="0 0 90 20" className={className} aria-hidden="true" role="img" aria-label="YouTube">
+    <svg viewBox={showText ? "0 0 90 20" : "0 0 28 20"} className={className} aria-hidden="true" role="img" aria-label="YouTube">
       <path fill="#FF0000" d="M27.972 2.929A3.515 3.515 0 0 0 25.5.454C23.34-.114 14.663-.114 14.663-.114S5.987-.114 3.825.454A3.515 3.515 0 0 0 1.353 2.93C.785 5.091.785 9.617.785 9.617s0 4.526.568 6.688a3.515 3.515 0 0 0 2.472 2.476c2.162.568 10.838.568 10.838.568s8.676 0 10.839-.568a3.515 3.515 0 0 0 2.472-2.476c.568-2.162.568-6.688.568-6.688s0-4.526-.568-6.688z" transform="translate(-0.785, 0.114)"/>
       <path fill="#FFFFFF" d="M11.433 14.714L18.746 9.617 11.433 4.52z"/>
       {showText && (
@@ -95,7 +95,7 @@ function YouTubeLogo({ className = '', showText = true }: { className?: string; 
 // Logo oficial de Spotify (círculo verde + wordmark)
 function SpotifyLogo({ className = '', showText = true }: { className?: string; showText?: boolean }) {
   return (
-    <svg viewBox="0 0 100 20" className={className} aria-hidden="true" role="img" aria-label="Spotify">
+    <svg viewBox={showText ? "0 0 100 20" : "0 0 20 20"} className={className} aria-hidden="true" role="img" aria-label="Spotify">
       <circle cx="10" cy="10" r="10" fill="#1DB954"/>
       <path fill="#FFFFFF" d="M14.5 8.2c-2.7-1.4-5.6-1.6-8.3-1-.2 0-.3.3-.2.5 0 .2.2.3.4.3 2.5-.5 5.2-.4 7.6 1 .1 0 .2.1.3.1.1 0 .3-.1.3-.2.1-.2 0-.5-.1-.6zm-.3 1.9c-2.4-1.3-5.2-1.5-7.6-.9-.2 0-.3.2-.3.4 0 .2.2.3.4.3 2.2-.5 4.7-.4 6.9.8.1 0 .2.1.3.1.1 0 .2-.1.3-.2.1-.2 0-.4-.1-.5h.1zm-1.1 1.8c-2-1.1-4.3-1.3-6.3-.8-.2 0-.3.2-.2.4 0 .2.2.3.3.2 1.8-.4 3.9-.3 5.7.7.1 0 .2.1.2.1.1 0 .2-.1.2-.2.1-.2 0-.4-.1-.4z"/>
       {showText && (
@@ -108,7 +108,7 @@ function SpotifyLogo({ className = '', showText = true }: { className?: string; 
 // Logo oficial de Instagram (gradiente + cámara)
 function InstagramLogo({ className = '', showText = true }: { className?: string; showText?: boolean }) {
   return (
-    <svg viewBox="0 0 110 20" className={className} aria-hidden="true" role="img" aria-label="Instagram">
+    <svg viewBox={showText ? "0 0 110 20" : "0 0 20 20"} className={className} aria-hidden="true" role="img" aria-label="Instagram">
       <defs>
         <linearGradient id="ig-gradient" x1="0%" y1="100%" x2="100%" y2="0%">
           <stop offset="0%" stopColor="#FFDC80"/>
@@ -134,7 +134,7 @@ function InstagramLogo({ className = '', showText = true }: { className?: string
 // Logo oficial de Facebook (f + azul)
 function FacebookLogo({ className = '', showText = true }: { className?: string; showText?: boolean }) {
   return (
-    <svg viewBox="0 0 100 20" className={className} aria-hidden="true" role="img" aria-label="Facebook">
+    <svg viewBox={showText ? "0 0 100 20" : "0 0 20 20"} className={className} aria-hidden="true" role="img" aria-label="Facebook">
       <circle cx="10" cy="10" r="10" fill="#1877F2"/>
       <path fill="#FFFFFF" d="M11.4 8.2h1.2V6.5h-1.2c-1.3 0-2.2.9-2.2 2.2v.9H8.1v1.7h1.1v4.3h1.7v-4.3h1.3l.2-1.7h-1.5v-.7c0-.5.2-.7.6-.7z"/>
       {showText && (
@@ -147,7 +147,7 @@ function FacebookLogo({ className = '', showText = true }: { className?: string;
 // Logo oficial de TikTok (nota musical + wordmark) - versión mejorada con fondo negro
 function TikTokLogo({ className = '', showText = true }: { className?: string; showText?: boolean }) {
   return (
-    <svg viewBox="0 0 24 24" className={className} aria-hidden="true" role="img" aria-label="TikTok">
+    <svg viewBox={showText ? "0 0 90 24" : "0 0 24 24"} className={className} aria-hidden="true" role="img" aria-label="TikTok">
       <rect x="0" y="0" width="24" height="24" rx="5" fill="#000000"/>
       <path fill="#25F4EE" d="M16.5 5.5c-.4-.6-.6-1.3-.7-2H13v12.5c0 1.4-1.1 2.5-2.5 2.5S8 17.4 8 16s1.1-2.5 2.5-2.5c.3 0 .5 0 .8.1v-2.7c-.3 0-.5-.1-.8-.1-3 0-5.5 2.5-5.5 5.5s2.5 5.5 5.5 5.5 5.5-2.5 5.5-5.5v-6c1.2.8 2.6 1.3 4 1.3V9c-.9 0-1.7-.3-2.5-.8-.4-.4-.7-.8-1-1.2z" transform="translate(0.5, 0)"/>
       <path fill="#FE2C55" d="M16.5 5.5c-.4-.6-.6-1.3-.7-2H13v12.5c0 1.4-1.1 2.5-2.5 2.5S8 17.4 8 16s1.1-2.5 2.5-2.5c.3 0 .5 0 .8.1v-2.7c-.3 0-.5-.1-.8-.1-3 0-5.5 2.5-5.5 5.5s2.5 5.5 5.5 5.5 5.5-2.5 5.5-5.5v-6c1.2.8 2.6 1.3 4 1.3V9c-.9 0-1.7-.3-2.5-.8-.4-.4-.7-.8-1-1.2z" transform="translate(-0.3, -0.3)"/>
@@ -162,7 +162,7 @@ function TikTokLogo({ className = '', showText = true }: { className?: string; s
 // Logo de Shazam (azul)
 function ShazamLogo({ className = '', showText = true }: { className?: string; showText?: boolean }) {
   return (
-    <svg viewBox="0 0 100 20" className={className} aria-hidden="true" role="img" aria-label="Shazam">
+    <svg viewBox={showText ? "0 0 100 20" : "0 0 20 20"} className={className} aria-hidden="true" role="img" aria-label="Shazam">
       <circle cx="10" cy="10" r="10" fill="#0066FF"/>
       <path fill="#FFFFFF" d="M7 13.5c1.5-.3 2.5-1 3.2-1.8.3.4.6.7 1 .9-.8 1-2 1.7-3.5 2-.2 0-.4 0-.5-.2-.1-.2 0-.5.2-.5-.2-.2-.4-.3-.4-.4zm.5-2.7c1-.2 1.7-.7 2.2-1.3.3.3.6.5 1 .7-.7.9-1.7 1.5-2.8 1.7-.2 0-.4-.1-.5-.3 0-.2.1-.4.3-.5-.1 0-.2-.2-.2-.3zm1-2.5c.7-.2 1.2-.5 1.6-1 .3.2.5.4.8.5-.6.7-1.4 1.2-2.3 1.4-.2 0-.4-.1-.5-.3 0-.2.1-.4.3-.4-.1-.1-.1-.2.1-.2zm.7-2.3c.5-.2.8-.5 1.1-.9.2.2.4.3.6.4-.4.5-.9.9-1.5 1.1-.2 0-.4 0-.5-.2 0-.2.1-.4.3-.4z"/>
       {showText && (
@@ -661,9 +661,9 @@ function Hero() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Ver video más reciente en YouTube"
-              className="group flex items-center justify-center gap-2.5 h-12 min-w-[180px] px-5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 hover:bg-[#FF0000] hover:border-[#FF0000] hover:scale-105 transition-all"
+              className="group flex items-center justify-center gap-3 h-12 w-[210px] sm:w-[220px] px-4 rounded-full bg-white/10 backdrop-blur-md border border-white/20 hover:bg-[#FF0000] hover:border-[#FF0000] hover:scale-105 transition-all text-center"
             >
-              <YouTubeLogo className="h-6 w-auto flex-shrink-0" showText={false} />
+              <YouTubeLogo className="h-5 w-auto flex-shrink-0" showText={false} />
               <span className="text-sm font-medium text-foreground group-hover:text-white transition-colors whitespace-nowrap">
                 Ver en YouTube
               </span>
@@ -675,9 +675,9 @@ function Hero() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Escuchar lanzamiento más reciente en Spotify"
-              className="group flex items-center justify-center gap-2.5 h-12 min-w-[180px] px-5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 hover:bg-[#1DB954] hover:border-[#1DB954] hover:scale-105 transition-all"
+              className="group flex items-center justify-center gap-3 h-12 w-[210px] sm:w-[220px] px-4 rounded-full bg-white/10 backdrop-blur-md border border-white/20 hover:bg-[#1DB954] hover:border-[#1DB954] hover:scale-105 transition-all text-center"
             >
-              <SpotifyLogo className="h-6 w-auto flex-shrink-0" showText={false} />
+              <SpotifyLogo className="h-5 w-auto flex-shrink-0" showText={false} />
               <span className="text-sm font-medium text-foreground group-hover:text-white transition-colors whitespace-nowrap">
                 Escuchar en Spotify
               </span>
