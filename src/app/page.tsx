@@ -76,6 +76,102 @@ function WhatsApp({ className }: { className?: string }) {
 }
 
 /* ============================================================
+   LOGOS OFICIALES DE PLATAFORMAS (SVG con colores de marca)
+   ============================================================ */
+
+// Logo oficial de YouTube (botón rojo + wordmark)
+function YouTubeLogo({ className = '', showText = true }: { className?: string; showText?: boolean }) {
+  return (
+    <svg viewBox="0 0 90 20" className={className} aria-hidden="true" role="img" aria-label="YouTube">
+      <path fill="#FF0000" d="M27.972 2.929A3.515 3.515 0 0 0 25.5.454C23.34-.114 14.663-.114 14.663-.114S5.987-.114 3.825.454A3.515 3.515 0 0 0 1.353 2.93C.785 5.091.785 9.617.785 9.617s0 4.526.568 6.688a3.515 3.515 0 0 0 2.472 2.476c2.162.568 10.838.568 10.838.568s8.676 0 10.839-.568a3.515 3.515 0 0 0 2.472-2.476c.568-2.162.568-6.688.568-6.688s0-4.526-.568-6.688z" transform="translate(-0.785, 0.114)"/>
+      <path fill="#FFFFFF" d="M11.433 14.714L18.746 9.617 11.433 4.52z"/>
+      {showText && (
+        <text x="34" y="15" fill="#FFFFFF" fontSize="14" fontWeight="bold" fontFamily="Arial, sans-serif">YouTube</text>
+      )}
+    </svg>
+  )
+}
+
+// Logo oficial de Spotify (círculo verde + wordmark)
+function SpotifyLogo({ className = '', showText = true }: { className?: string; showText?: boolean }) {
+  return (
+    <svg viewBox="0 0 100 20" className={className} aria-hidden="true" role="img" aria-label="Spotify">
+      <circle cx="10" cy="10" r="10" fill="#1DB954"/>
+      <path fill="#FFFFFF" d="M14.5 8.2c-2.7-1.4-5.6-1.6-8.3-1-.2 0-.3.3-.2.5 0 .2.2.3.4.3 2.5-.5 5.2-.4 7.6 1 .1 0 .2.1.3.1.1 0 .3-.1.3-.2.1-.2 0-.5-.1-.6zm-.3 1.9c-2.4-1.3-5.2-1.5-7.6-.9-.2 0-.3.2-.3.4 0 .2.2.3.4.3 2.2-.5 4.7-.4 6.9.8.1 0 .2.1.3.1.1 0 .2-.1.3-.2.1-.2 0-.4-.1-.5h.1zm-1.1 1.8c-2-1.1-4.3-1.3-6.3-.8-.2 0-.3.2-.2.4 0 .2.2.3.3.2 1.8-.4 3.9-.3 5.7.7.1 0 .2.1.2.1.1 0 .2-.1.2-.2.1-.2 0-.4-.1-.4z"/>
+      {showText && (
+        <text x="26" y="15" fill="#FFFFFF" fontSize="13" fontWeight="bold" fontFamily="Arial, sans-serif">Spotify</text>
+      )}
+    </svg>
+  )
+}
+
+// Logo oficial de Instagram (gradiente + cámara)
+function InstagramLogo({ className = '', showText = true }: { className?: string; showText?: boolean }) {
+  return (
+    <svg viewBox="0 0 110 20" className={className} aria-hidden="true" role="img" aria-label="Instagram">
+      <defs>
+        <linearGradient id="ig-gradient" x1="0%" y1="100%" x2="100%" y2="0%">
+          <stop offset="0%" stopColor="#FFDC80"/>
+          <stop offset="10%" stopColor="#FCAF45"/>
+          <stop offset="30%" stopColor="#F77737"/>
+          <stop offset="50%" stopColor="#F56040"/>
+          <stop offset="70%" stopColor="#E1306C"/>
+          <stop offset="90%" stopColor="#833AB4"/>
+          <stop offset="100%" stopColor="#5851DB"/>
+        </linearGradient>
+      </defs>
+      <rect x="0" y="0" width="20" height="20" rx="5" fill="url(#ig-gradient)"/>
+      <rect x="5" y="5" width="10" height="10" rx="3" fill="none" stroke="#FFFFFF" strokeWidth="1.5"/>
+      <circle cx="10" cy="10" r="2.5" fill="none" stroke="#FFFFFF" strokeWidth="1.2"/>
+      <circle cx="14" cy="6" r="0.8" fill="#FFFFFF"/>
+      {showText && (
+        <text x="26" y="15" fill="#FFFFFF" fontSize="12" fontWeight="bold" fontFamily="Arial, sans-serif">Instagram</text>
+      )}
+    </svg>
+  )
+}
+
+// Logo oficial de Facebook (f + azul)
+function FacebookLogo({ className = '', showText = true }: { className?: string; showText?: boolean }) {
+  return (
+    <svg viewBox="0 0 100 20" className={className} aria-hidden="true" role="img" aria-label="Facebook">
+      <circle cx="10" cy="10" r="10" fill="#1877F2"/>
+      <path fill="#FFFFFF" d="M11.4 8.2h1.2V6.5h-1.2c-1.3 0-2.2.9-2.2 2.2v.9H8.1v1.7h1.1v4.3h1.7v-4.3h1.3l.2-1.7h-1.5v-.7c0-.5.2-.7.6-.7z"/>
+      {showText && (
+        <text x="26" y="15" fill="#FFFFFF" fontSize="13" fontWeight="bold" fontFamily="Arial, sans-serif">Facebook</text>
+      )}
+    </svg>
+  )
+}
+
+// Logo oficial de TikTok (nota musical + wordmark)
+function TikTokLogo({ className = '', showText = true }: { className?: string; showText?: boolean }) {
+  return (
+    <svg viewBox="0 0 100 20" className={className} aria-hidden="true" role="img" aria-label="TikTok">
+      <path fill="#25F4EE" d="M14.5 6.6c-.2-.1-.4-.1-.5-.2-.1-.4-.1-.7-.2-1C13.4 4.2 12.4 3.5 11 3.5c-.4 0-.7 0-1 .1v.3c.3.2.6.4.9.7.6.7.9 1.5.9 2.3 0 .3-.1.6-.1.9-.1.2-.1.5-.2.7-.2.2-.4.3-.6.5-.2.1-.4.2-.6.2-.2 0-.5 0-.7-.1-.2-.1-.4-.2-.6-.3.2.2.5.4.8.5.4.1.7.1 1.1.1.4 0 .7-.1 1-.2.3-.1.5-.3.8-.5.2-.2.3-.5.5-.7.2-.4.3-.8.3-1.2z" opacity="0.7"/>
+      <path fill="#FE2C55" d="M14.5 6.6c-.2-.1-.4-.1-.5-.2-.1-.4-.1-.7-.2-1C13.4 4.2 12.4 3.5 11 3.5c-.4 0-.7 0-1 .1v.3c.3.2.6.4.9.7.6.7.9 1.5.9 2.3 0 .3-.1.6-.1.9-.1.2-.1.5-.2.7-.2.2-.4.3-.6.5-.2.1-.4.2-.6.2-.2 0-.5 0-.7-.1-.2-.1-.4-.2-.6-.3.2.2.5.4.8.5.4.1.7.1 1.1.1.4 0 .7-.1 1-.2.3-.1.5-.3.8-.5.2-.2.3-.5.5-.7.2-.4.3-.8.3-1.2z" opacity="0.7" transform="translate(-0.5, -0.5)"/>
+      <path fill="#FFFFFF" d="M14.5 6.6c-.2-.1-.4-.1-.5-.2-.1-.4-.1-.7-.2-1C13.4 4.2 12.4 3.5 11 3.5c-.4 0-.7 0-1 .1v.3c.3.2.6.4.9.7.6.7.9 1.5.9 2.3 0 .3-.1.6-.1.9-.1.2-.1.5-.2.7-.2.2-.4.3-.6.5-.2.1-.4.2-.6.2-.2 0-.5 0-.7-.1-.2-.1-.4-.2-.6-.3.2.2.5.4.8.5.4.1.7.1 1.1.1.4 0 .7-.1 1-.2.3-.1.5-.3.8-.5.2-.2.3-.5.5-.7.2-.4.3-.8.3-1.2z"/>
+      {showText && (
+        <text x="20" y="15" fill="#FFFFFF" fontSize="13" fontWeight="bold" fontFamily="Arial, sans-serif">TikTok</text>
+      )}
+    </svg>
+  )
+}
+
+// Logo de Shazam (azul)
+function ShazamLogo({ className = '', showText = true }: { className?: string; showText?: boolean }) {
+  return (
+    <svg viewBox="0 0 100 20" className={className} aria-hidden="true" role="img" aria-label="Shazam">
+      <circle cx="10" cy="10" r="10" fill="#0066FF"/>
+      <path fill="#FFFFFF" d="M7 13.5c1.5-.3 2.5-1 3.2-1.8.3.4.6.7 1 .9-.8 1-2 1.7-3.5 2-.2 0-.4 0-.5-.2-.1-.2 0-.5.2-.5-.2-.2-.4-.3-.4-.4zm.5-2.7c1-.2 1.7-.7 2.2-1.3.3.3.6.5 1 .7-.7.9-1.7 1.5-2.8 1.7-.2 0-.4-.1-.5-.3 0-.2.1-.4.3-.5-.1 0-.2-.2-.2-.3zm1-2.5c.7-.2 1.2-.5 1.6-1 .3.2.5.4.8.5-.6.7-1.4 1.2-2.3 1.4-.2 0-.4-.1-.5-.3 0-.2.1-.4.3-.4-.1-.1-.1-.2.1-.2zm.7-2.3c.5-.2.8-.5 1.1-.9.2.2.4.3.6.4-.4.5-.9.9-1.5 1.1-.2 0-.4 0-.5-.2 0-.2.1-.4.3-.4z"/>
+      {showText && (
+        <text x="26" y="15" fill="#FFFFFF" fontSize="13" fontWeight="bold" fontFamily="Arial, sans-serif">Shazam</text>
+      )}
+    </svg>
+  )
+}
+
+/* ============================================================
    DATOS DEL ARTISTA — Alfred White
    Fuentes verificadas:
    - Spotify: https://open.spotify.com/artist/51GuS1Zdn16Rr5h8JL0v3x (309 oyentes/mes)
@@ -554,27 +650,64 @@ function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 1 }}
-          className="mt-10 flex flex-wrap items-center justify-center gap-4"
+          className="mt-10 flex flex-col items-center gap-5"
         >
-          <Button
-            size="lg"
-            className="rounded-full bg-gradient-to-r from-amber-400 to-fuchsia-500 text-background hover:opacity-90 px-7 font-medium"
-            onClick={() =>
-              document.getElementById('videos')?.scrollIntoView({ behavior: 'smooth' })
-            }
-          >
-            <Play className="mr-2 h-4 w-4" /> Ver videos
-          </Button>
-          <Button
-            size="lg"
-            variant="outline"
-            className="rounded-full border-white/20 text-foreground hover:bg-white/5 px-7"
-            onClick={() =>
-              document.getElementById('historia')?.scrollIntoView({ behavior: 'smooth' })
-            }
-          >
-            <Sparkles className="mr-2 h-4 w-4" /> Conoce su historia
-          </Button>
+          {/* Fila 1: Logos clickeables de YouTube y Spotify */}
+          <div className="flex flex-wrap items-center justify-center gap-3">
+            {/* Logo YouTube clickable → video más reciente */}
+            <a
+              href={`https://www.youtube.com/watch?v=${HERO_BG_VIDEO_ID}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Ver video más reciente en YouTube"
+              className="group flex items-center gap-2 h-12 px-5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 hover:bg-white hover:scale-105 transition-all"
+            >
+              <YouTubeLogo className="h-6 w-auto" showText={false} />
+              <span className="text-xs font-medium text-foreground group-hover:text-[#FF0000] transition-colors hidden sm:inline">
+                Ver en YouTube
+              </span>
+            </a>
+
+            {/* Logo Spotify clickable → lanzamiento más reciente */}
+            <a
+              href={`https://open.spotify.com/track/2TeZIVTjabmKGgtIDti0dT`}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Escuchar lanzamiento más reciente en Spotify"
+              className="group flex items-center gap-2 h-12 px-5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 hover:bg-white hover:scale-105 transition-all"
+            >
+              <SpotifyLogo className="h-6 w-auto" showText={false} />
+              <span className="text-xs font-medium text-foreground group-hover:text-[#1DB954] transition-colors hidden sm:inline">
+                Escuchar en Spotify
+              </span>
+            </a>
+          </div>
+
+          {/* Fila 2: Botones de acción */}
+          <div className="flex flex-wrap items-center justify-center gap-4">
+            {/* Botón Escuchar música → sección discografía */}
+            <Button
+              size="lg"
+              className="rounded-full bg-gradient-to-r from-amber-400 to-fuchsia-500 text-background hover:opacity-90 px-7 font-medium"
+              onClick={() =>
+                document.getElementById('musica')?.scrollIntoView({ behavior: 'smooth' })
+              }
+            >
+              <Play className="mr-2 h-4 w-4" /> Escuchar música
+            </Button>
+
+            {/* Botón Conoce su historia → sección historia */}
+            <Button
+              size="lg"
+              variant="outline"
+              className="rounded-full border-white/20 text-foreground hover:bg-white/5 px-7 backdrop-blur-md"
+              onClick={() =>
+                document.getElementById('historia')?.scrollIntoView({ behavior: 'smooth' })
+              }
+            >
+              <Sparkles className="mr-2 h-4 w-4" /> Conoce su historia
+            </Button>
+          </div>
         </motion.div>
 
         {/* Indicador de scroll */}
@@ -777,36 +910,41 @@ function History() {
           </div>
           <div className="glass rounded-3xl p-6 md:p-8 flex flex-col justify-between">
             <div>
-              <div className="text-xs uppercase tracking-[0.3em] text-primary/80 font-medium mb-3">
+              <div className="text-xs uppercase tracking-[0.3em] text-primary/80 font-medium mb-4">
                 Plataformas oficiales
               </div>
-              <ul className="space-y-3">
+              <div className="space-y-2.5">
                 {[
-                  { name: 'Spotify', note: '309 oyentes/mes · Bakanora 25K+', url: ARTIST.social.spotify },
-                  { name: 'YouTube', note: 'Canal @alfredwhiteco · 18+ videos', url: ARTIST.social.youtube },
-                  { name: 'Instagram', note: '@alfredwhiteco', url: ARTIST.social.instagram },
-                  { name: 'Facebook', note: 'Alfred White (alfredo.cartagena.37)', url: ARTIST.social.facebook },
-                  { name: 'TikTok', note: '@alfredwhiteelparcero', url: ARTIST.social.tiktok },
-                  { name: 'Shazam', note: 'Reconocimiento de canciones', url: ARTIST.social.shazam },
+                  { Logo: SpotifyLogo, name: 'Spotify', note: '309 oyentes/mes · Bakanora 25K+', url: ARTIST.social.spotify },
+                  { Logo: YouTubeLogo, name: 'YouTube', note: 'Canal @alfredwhiteco · 18+ videos', url: ARTIST.social.youtube },
+                  { Logo: InstagramLogo, name: 'Instagram', note: '@alfredwhiteco', url: ARTIST.social.instagram },
+                  { Logo: FacebookLogo, name: 'Facebook', note: 'Alfred White (alfredo.cartagena.37)', url: ARTIST.social.facebook },
+                  { Logo: TikTokLogo, name: 'TikTok', note: '@alfredwhiteelparcero', url: ARTIST.social.tiktok },
+                  { Logo: ShazamLogo, name: 'Shazam', note: 'Reconocimiento de canciones', url: ARTIST.social.shazam },
                 ].map((p) => (
-                  <li key={p.name}>
-                    <a
-                      href={p.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-start gap-3 group hover:bg-white/5 -mx-2 px-2 py-1.5 rounded-lg transition-colors"
-                    >
-                      <span className="mt-2 h-1.5 w-1.5 rounded-full bg-gradient-to-r from-amber-400 to-fuchsia-500 flex-shrink-0" />
-                      <div className="min-w-0">
-                        <div className="text-sm font-medium text-foreground group-hover:text-primary transition-colors">
-                          {p.name} ↗
-                        </div>
-                        <div className="text-xs text-muted-foreground">{p.note}</div>
+                  <a
+                    key={p.name}
+                    href={p.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={`Visitar ${p.name} oficial de Alfred White`}
+                    className="group flex items-center gap-3 hover:bg-white/5 -mx-2 px-2 py-2 rounded-lg transition-all hover:translate-x-1"
+                  >
+                    {/* Logo oficial de la plataforma */}
+                    <div className="flex-shrink-0 h-8 w-8 flex items-center justify-center">
+                      <p.Logo className="h-8 w-auto" showText={false} />
+                    </div>
+                    {/* Info de la plataforma */}
+                    <div className="min-w-0 flex-1">
+                      <div className="text-sm font-medium text-foreground group-hover:text-primary transition-colors flex items-center gap-1">
+                        {p.name}
+                        <ArrowUpRight className="h-3 w-3 opacity-0 group-hover:opacity-100 transition-opacity" />
                       </div>
-                    </a>
-                  </li>
+                      <div className="text-[11px] text-muted-foreground truncate">{p.note}</div>
+                    </div>
+                  </a>
                 ))}
-              </ul>
+              </div>
             </div>
           </div>
         </motion.div>
