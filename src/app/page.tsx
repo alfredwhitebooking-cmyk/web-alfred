@@ -456,8 +456,8 @@ function FloatingNav() {
    ============================================================ */
 
 // Video de fondo de YouTube para el Hero (loop + mute + autoplay)
-// Usamos "Bakanora" (25K+ plays en Spotify) como video de fondo
-const HERO_BG_VIDEO_ID = 'wkoGx0YyZBQ'
+// Usamos "-0 (Video Oficial)" como video de fondo
+const HERO_BG_VIDEO_ID = 'aDrrZB0hOfA'
 
 function YouTubeBackground({ videoId }: { videoId: string }) {
   return (
@@ -947,9 +947,23 @@ function PhotoGallery() {
 function MusicVideos() {
   const [active, setActive] = useState<number | null>(null)
   const [showAll, setShowAll] = useState(false)
+  const [hoveredVideo, setHoveredVideo] = useState<number | null>(null)
+  const hoverTimeoutRef = useRef<NodeJS.Timeout | null>(null)
 
   // Mostrar primero 6, luego el resto con "ver más"
   const visibleVideos = showAll ? VIDEOS : VIDEOS.slice(0, 6)
+
+  const handleVideoHover = (videoId: number) => {
+    if (hoverTimeoutRef.current) clearTimeout(hoverTimeoutRef.current)
+    hoverTimeoutRef.current = setTimeout(() => {
+      setHoveredVideo(videoId)
+    }, 500) // 500ms de delay antes de reproducir el preview
+  }
+
+  const handleVideoLeave = () => {
+    if (hoverTimeoutRef.current) clearTimeout(hoverTimeoutRef.current)
+    setHoveredVideo(null)
+  }
 
   return (
     <section id="videos" className="relative py-24 md:py-32 noise-overlay">
@@ -957,7 +971,7 @@ function MusicVideos() {
         <SectionHeading
           kicker="Videos · YouTube"
           title="Música en movimiento"
-          description={`18 videos oficiales del canal YouTube de Alfred White. Haz clic en cualquier video para reproducirlo automáticamente.`}
+          description={`18 videos oficiales del canal YouTube de Alfred White. Pasa el cursor sobre cualquier video para ver un preview en silencio, o haz clic para reproducirlo con sonido.`}
         />
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-5">
@@ -970,25 +984,65 @@ function MusicVideos() {
               transition={{ duration: 0.5, delay: (i % 3) * 0.1 }}
               className="group relative rounded-2xl overflow-hidden glow-border cursor-pointer bg-card"
               onClick={() => setActive(video.id)}
+              onMouseEnter={() => handleVideoHover(video.id)}
+              onMouseLeave={handleVideoLeave}
             >
               {/* Aspecto 16:9 con miniatura real de YouTube */}
               <div className="relative aspect-video overflow-hidden">
+                {/* Miniatura estática (visible siempre, oculta al hover) */}
                 <img
                   src={`https://img.youtube.com/vi/${video.youtubeId}/hqdefault.jpg`}
                   alt={`${video.title} - Alfred White`}
-                  className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                  className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-300 ${
+                    hoveredVideo === video.id ? 'opacity-0' : 'opacity-100'
+                  }`}
                   loading="lazy"
                 />
-                {/* Overlay oscuro para legibilidad */}
-                <div className="absolute inset-0 bg-gradient-to-t from-background/60 via-transparent to-background/30" />
 
-                {/* Botón play */}
-                <div className="absolute inset-0 flex items-center justify-center">
+                {/* Video de YouTube en preview al hover (mute, autoplay, loop) */}
+                {hoveredVideo === video.id && (
+                  <iframe
+                    src={`https://www.youtube.com/embed/${video.youtubeId}?autoplay=1&mute=1&loop=1&playlist=${video.youtubeId}&controls=0&showinfo=0&modestbranding=1&rel=0&iv_load_policy=3&disablekb=1&playsinline=1&start=5`}
+                    allow="autoplay; encrypted-media; picture-in-picture"
+                    allowFullScreen={false}
+                    className="absolute inset-0 w-full h-full scale-[1.05] pointer-events-none"
+                    title={`Preview de ${video.title}`}
+                    aria-hidden="true"
+                  />
+                )}
+
+                {/* Overlay oscuro para legibilidad (menos opaco cuando hay preview) */}
+                <div
+                  className={`absolute inset-0 bg-gradient-to-t from-background/60 via-transparent to-background/30 transition-opacity duration-300 ${
+                    hoveredVideo === video.id ? 'opacity-50' : 'opacity-100'
+                  }`}
+                />
+
+                {/* Botón play (oculto durante el preview) */}
+                <div
+                  className={`absolute inset-0 flex items-center justify-center transition-opacity duration-300 ${
+                    hoveredVideo === video.id ? 'opacity-0' : 'opacity-100'
+                  }`}
+                >
                   <div className="relative h-14 w-14 md:h-16 md:w-16 rounded-full bg-background/30 backdrop-blur-md flex items-center justify-center border border-white/20 transition-transform duration-500 group-hover:scale-110">
                     <Play className="h-5 w-5 md:h-6 md:w-6 text-foreground fill-foreground ml-1" />
                     <div className="absolute inset-0 rounded-full ring-2 ring-amber-400/40 animate-pulse-glow" />
                   </div>
                 </div>
+
+                {/* Indicador de preview activo */}
+                {hoveredVideo === video.id && (
+                  <motion.div
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    className="absolute bottom-2 left-2 glass rounded-lg px-2 py-1 flex items-center gap-1.5"
+                  >
+                    <Equalizer bars={4} className="h-3 flex-shrink-0" />
+                    <span className="text-[10px] uppercase tracking-wider text-primary font-medium">
+                      Preview · Click para audio
+                    </span>
+                  </motion.div>
+                )}
 
                 {/* Duración */}
                 <div className="absolute bottom-2 right-2 px-2 py-0.5 rounded-md bg-background/80 backdrop-blur-sm text-[10px] font-mono">
@@ -1218,18 +1272,26 @@ function Discography() {
                 </div>
               </div>
 
-              {/* Preview iframe flotante (se carga solo cuando se hace hover) */}
-              {previewing === track.trackId && (
-                <div className="absolute inset-x-0 -bottom-1 opacity-0 pointer-events-none">
-                  <iframe
-                    src={`https://open.spotify.com/embed/track/${track.trackId}?utm_source=generator&theme=0`}
-                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-                    loading="lazy"
-                    className="w-full h-[80px]"
-                    title={`Preview de ${track.title}`}
-                  />
-                </div>
-              )}
+              {/* Reproductor de Spotify visible al hover (preview real) */}
+              <AnimatePresence>
+                {previewing === track.trackId && (
+                  <motion.div
+                    initial={{ opacity: 0, height: 0 }}
+                    animate={{ opacity: 1, height: 'auto' }}
+                    exit={{ opacity: 0, height: 0 }}
+                    transition={{ duration: 0.3 }}
+                    className="overflow-hidden border-t border-white/5"
+                  >
+                    <iframe
+                      src={`https://open.spotify.com/embed/track/${track.trackId}?utm_source=generator&theme=0`}
+                      allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                      className="w-full h-[80px] block"
+                      title={`Reproductor de ${track.title}`}
+                      loading="lazy"
+                    />
+                  </motion.div>
+                )}
+              </AnimatePresence>
             </motion.div>
           ))}
         </div>
