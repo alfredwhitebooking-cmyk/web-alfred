@@ -248,6 +248,11 @@ const TIMELINE = [
     title: 'Catálogo amplio',
     text: 'Lanza "Bakanora (Remix) 2024 Remastered", nuevos visualizers para "WII", "De Repente" y más sencillos como "Soy Nada", "Segundo Intento", "Para Qué Huir" y "Voy A Olvidar".',
   },
+  {
+    year: '2026',
+    title: 'Buzón & Vista al Mar',
+    text: 'Lanza "Buzón" y "Vista al Mar", temas frescos y modernos que representan el estilo latino de Alfred White con producciones audiovisuales grabadas en ambientes de playa.',
+  },
 ]
 
 const PHOTOS = [
@@ -269,27 +274,31 @@ const PHOTOS = [
   { id: 16, caption: 'Cover Sensual (Performance)', ratio: 'tall', src: '/photos/yt_AvhQFvkqGC8.jpg' },
   { id: 17, caption: '27052022 (Sesión Acústica)', ratio: 'wide', src: '/photos/yt_dd-sXwxTCTo.jpg' },
   { id: 18, caption: '-0 (Videolyric)', ratio: 'square', src: '/photos/yt_dm_FcQLz_Vw.jpg' },
+  { id: 19, caption: 'Buzón (Video Oficial 2026)', ratio: 'wide', src: '/photos/yt_4OCrTEM_9rk.jpg' },
+  { id: 20, caption: 'Vista al Mar (Video Oficial 2026)', ratio: 'wide', src: '/photos/yt__aI0L_8jewQ.jpg' },
 ]
 
 const VIDEOS = [
-  { id: 1, title: '-0 (Video Oficial)', year: '2022', duration: '3:24', youtubeId: 'aDrrZB0hOfA' },
-  { id: 2, title: 'Bakanora', year: '2022', duration: '3:18', youtubeId: 'wkoGx0YyZBQ' },
-  { id: 3, title: 'Tentacion X Juan Roldan', year: '2023', duration: '3:36', youtubeId: '0B00IbU6F08' },
-  { id: 4, title: 'Soy Nada', year: '2024', duration: '2:58', youtubeId: 'kC7GvnraUpE' },
-  { id: 5, title: 'Lokura X Gabyl', year: '2024', duration: '3:02', youtubeId: 'I5WYssqLI54' },
-  { id: 6, title: 'Segundo Intento', year: '2024', duration: '2:45', youtubeId: 'D78OU0V-pAI' },
-  { id: 7, title: 'Tentacion (Solo)', year: '2023', duration: '3:30', youtubeId: 'Dyw3nOKoWkg' },
-  { id: 8, title: 'Lokura (Solo)', year: '2022', duration: '3:00', youtubeId: 'ZWRPcu2P_Ts' },
-  { id: 9, title: 'Bakanora (Remix 2024)', year: '2024', duration: '3:25', youtubeId: 'OslbqrkxATI' },
-  { id: 10, title: 'Trampa', year: '2023', duration: '2:50', youtubeId: 'vO1w6dhGJ8o' },
-  { id: 11, title: 'Para Qué Huir', year: '2024', duration: '3:05', youtubeId: 'PQvgxLGSFGo' },
-  { id: 12, title: 'WII (Visualizer)', year: '2024', duration: '2:40', youtubeId: 'CiPyR-Nzflw' },
-  { id: 13, title: 'De Repente (Visualizer)', year: '2024', duration: '2:55', youtubeId: 't-K94IfG1s4' },
-  { id: 14, title: '-0 (Videolyric)', year: '2022', duration: '3:20', youtubeId: 'dm_FcQLz_Vw' },
-  { id: 15, title: 'Viajero del Tiempo', year: '2023', duration: '3:15', youtubeId: '77Oafggr4o0' },
-  { id: 16, title: 'Me siento bien', year: '2024', duration: '2:48', youtubeId: 'w8LO_ABN9S4' },
-  { id: 17, title: '27052022', year: '2022', duration: '3:10', youtubeId: 'dd-sXwxTCTo' },
-  { id: 18, title: 'Cover Sensual', year: '2024', duration: '2:30', youtubeId: 'AvhQFvkqGC8' },
+  { id: 1, title: 'Buzón (Video Oficial)', year: '2026', duration: '3:15', youtubeId: '4OCrTEM_9rk' },
+  { id: 2, title: 'Vista al Mar (Video Oficial)', year: '2026', duration: '3:20', youtubeId: '_aI0L_8jewQ' },
+  { id: 3, title: '-0 (Video Oficial)', year: '2022', duration: '3:24', youtubeId: 'aDrrZB0hOfA' },
+  { id: 4, title: 'Bakanora', year: '2022', duration: '3:18', youtubeId: 'wkoGx0YyZBQ' },
+  { id: 5, title: 'Tentacion X Juan Roldan', year: '2023', duration: '3:36', youtubeId: '0B00IbU6F08' },
+  { id: 6, title: 'Soy Nada', year: '2024', duration: '2:58', youtubeId: 'kC7GvnraUpE' },
+  { id: 7, title: 'Lokura X Gabyl', year: '2024', duration: '3:02', youtubeId: 'I5WYssqLI54' },
+  { id: 8, title: 'Segundo Intento', year: '2024', duration: '2:45', youtubeId: 'D78OU0V-pAI' },
+  { id: 9, title: 'Tentacion (Solo)', year: '2023', duration: '3:30', youtubeId: 'Dyw3nOKoWkg' },
+  { id: 10, title: 'Lokura (Solo)', year: '2022', duration: '3:00', youtubeId: 'ZWRPcu2P_Ts' },
+  { id: 11, title: 'Bakanora (Remix 2024)', year: '2024', duration: '3:25', youtubeId: 'OslbqrkxATI' },
+  { id: 12, title: 'Trampa', year: '2023', duration: '2:50', youtubeId: 'vO1w6dhGJ8o' },
+  { id: 13, title: 'Para Qué Huir', year: '2024', duration: '3:05', youtubeId: 'PQvgxLGSFGo' },
+  { id: 14, title: 'WII (Visualizer)', year: '2024', duration: '2:40', youtubeId: 'CiPyR-Nzflw' },
+  { id: 15, title: 'De Repente (Visualizer)', year: '2024', duration: '2:55', youtubeId: 't-K94IfG1s4' },
+  { id: 16, title: '-0 (Videolyric)', year: '2022', duration: '3:20', youtubeId: 'dm_FcQLz_Vw' },
+  { id: 17, title: 'Viajero del Tiempo', year: '2023', duration: '3:15', youtubeId: '77Oafggr4o0' },
+  { id: 18, title: 'Me siento bien', year: '2024', duration: '2:48', youtubeId: 'w8LO_ABN9S4' },
+  { id: 19, title: '27052022', year: '2022', duration: '3:10', youtubeId: 'dd-sXwxTCTo' },
+  { id: 20, title: 'Cover Sensual', year: '2024', duration: '2:30', youtubeId: 'AvhQFvkqGC8' },
 ]
 
 // Discografía completa de Spotify con track IDs y carátulas reales
