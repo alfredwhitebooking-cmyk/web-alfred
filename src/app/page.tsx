@@ -144,15 +144,16 @@ function FacebookLogo({ className = '', showText = true }: { className?: string;
   )
 }
 
-// Logo oficial de TikTok (nota musical + wordmark)
+// Logo oficial de TikTok (nota musical + wordmark) - versión mejorada con fondo negro
 function TikTokLogo({ className = '', showText = true }: { className?: string; showText?: boolean }) {
   return (
-    <svg viewBox="0 0 100 20" className={className} aria-hidden="true" role="img" aria-label="TikTok">
-      <path fill="#25F4EE" d="M14.5 6.6c-.2-.1-.4-.1-.5-.2-.1-.4-.1-.7-.2-1C13.4 4.2 12.4 3.5 11 3.5c-.4 0-.7 0-1 .1v.3c.3.2.6.4.9.7.6.7.9 1.5.9 2.3 0 .3-.1.6-.1.9-.1.2-.1.5-.2.7-.2.2-.4.3-.6.5-.2.1-.4.2-.6.2-.2 0-.5 0-.7-.1-.2-.1-.4-.2-.6-.3.2.2.5.4.8.5.4.1.7.1 1.1.1.4 0 .7-.1 1-.2.3-.1.5-.3.8-.5.2-.2.3-.5.5-.7.2-.4.3-.8.3-1.2z" opacity="0.7"/>
-      <path fill="#FE2C55" d="M14.5 6.6c-.2-.1-.4-.1-.5-.2-.1-.4-.1-.7-.2-1C13.4 4.2 12.4 3.5 11 3.5c-.4 0-.7 0-1 .1v.3c.3.2.6.4.9.7.6.7.9 1.5.9 2.3 0 .3-.1.6-.1.9-.1.2-.1.5-.2.7-.2.2-.4.3-.6.5-.2.1-.4.2-.6.2-.2 0-.5 0-.7-.1-.2-.1-.4-.2-.6-.3.2.2.5.4.8.5.4.1.7.1 1.1.1.4 0 .7-.1 1-.2.3-.1.5-.3.8-.5.2-.2.3-.5.5-.7.2-.4.3-.8.3-1.2z" opacity="0.7" transform="translate(-0.5, -0.5)"/>
-      <path fill="#FFFFFF" d="M14.5 6.6c-.2-.1-.4-.1-.5-.2-.1-.4-.1-.7-.2-1C13.4 4.2 12.4 3.5 11 3.5c-.4 0-.7 0-1 .1v.3c.3.2.6.4.9.7.6.7.9 1.5.9 2.3 0 .3-.1.6-.1.9-.1.2-.1.5-.2.7-.2.2-.4.3-.6.5-.2.1-.4.2-.6.2-.2 0-.5 0-.7-.1-.2-.1-.4-.2-.6-.3.2.2.5.4.8.5.4.1.7.1 1.1.1.4 0 .7-.1 1-.2.3-.1.5-.3.8-.5.2-.2.3-.5.5-.7.2-.4.3-.8.3-1.2z"/>
+    <svg viewBox="0 0 24 24" className={className} aria-hidden="true" role="img" aria-label="TikTok">
+      <rect x="0" y="0" width="24" height="24" rx="5" fill="#000000"/>
+      <path fill="#25F4EE" d="M16.5 5.5c-.4-.6-.6-1.3-.7-2H13v12.5c0 1.4-1.1 2.5-2.5 2.5S8 17.4 8 16s1.1-2.5 2.5-2.5c.3 0 .5 0 .8.1v-2.7c-.3 0-.5-.1-.8-.1-3 0-5.5 2.5-5.5 5.5s2.5 5.5 5.5 5.5 5.5-2.5 5.5-5.5v-6c1.2.8 2.6 1.3 4 1.3V9c-.9 0-1.7-.3-2.5-.8-.4-.4-.7-.8-1-1.2z" transform="translate(0.5, 0)"/>
+      <path fill="#FE2C55" d="M16.5 5.5c-.4-.6-.6-1.3-.7-2H13v12.5c0 1.4-1.1 2.5-2.5 2.5S8 17.4 8 16s1.1-2.5 2.5-2.5c.3 0 .5 0 .8.1v-2.7c-.3 0-.5-.1-.8-.1-3 0-5.5 2.5-5.5 5.5s2.5 5.5 5.5 5.5 5.5-2.5 5.5-5.5v-6c1.2.8 2.6 1.3 4 1.3V9c-.9 0-1.7-.3-2.5-.8-.4-.4-.7-.8-1-1.2z" transform="translate(-0.3, -0.3)"/>
+      <path fill="#FFFFFF" d="M16.5 5.5c-.4-.6-.6-1.3-.7-2H13v12.5c0 1.4-1.1 2.5-2.5 2.5S8 17.4 8 16s1.1-2.5 2.5-2.5c.3 0 .5 0 .8.1v-2.7c-.3 0-.5-.1-.8-.1-3 0-5.5 2.5-5.5 5.5s2.5 5.5 5.5 5.5 5.5-2.5 5.5-5.5v-6c1.2.8 2.6 1.3 4 1.3V9c-.9 0-1.7-.3-2.5-.8-.4-.4-.7-.8-1-1.2z"/>
       {showText && (
-        <text x="20" y="15" fill="#FFFFFF" fontSize="13" fontWeight="bold" fontFamily="Arial, sans-serif">TikTok</text>
+        <text x="30" y="18" fill="#FFFFFF" fontSize="16" fontWeight="bold" fontFamily="Arial, sans-serif">TikTok</text>
       )}
     </svg>
   )
@@ -650,20 +651,20 @@ function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 1 }}
-          className="mt-10 flex flex-col items-center gap-5"
+          className="mt-10 flex flex-col items-center gap-4"
         >
-          {/* Fila 1: Logos clickeables de YouTube y Spotify */}
-          <div className="flex flex-wrap items-center justify-center gap-3">
+          {/* Fila 1: Logos clickeables de YouTube y Spotify (mismo tamaño, mismo estilo) */}
+          <div className="flex flex-wrap items-stretch justify-center gap-3">
             {/* Logo YouTube clickable → video más reciente */}
             <a
               href={`https://www.youtube.com/watch?v=${HERO_BG_VIDEO_ID}`}
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Ver video más reciente en YouTube"
-              className="group flex items-center gap-2 h-12 px-5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 hover:bg-white hover:scale-105 transition-all"
+              className="group flex items-center justify-center gap-2.5 h-12 min-w-[180px] px-5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 hover:bg-[#FF0000] hover:border-[#FF0000] hover:scale-105 transition-all"
             >
-              <YouTubeLogo className="h-6 w-auto" showText={false} />
-              <span className="text-xs font-medium text-foreground group-hover:text-[#FF0000] transition-colors hidden sm:inline">
+              <YouTubeLogo className="h-6 w-auto flex-shrink-0" showText={false} />
+              <span className="text-sm font-medium text-foreground group-hover:text-white transition-colors whitespace-nowrap">
                 Ver en YouTube
               </span>
             </a>
@@ -674,39 +675,38 @@ function Hero() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Escuchar lanzamiento más reciente en Spotify"
-              className="group flex items-center gap-2 h-12 px-5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 hover:bg-white hover:scale-105 transition-all"
+              className="group flex items-center justify-center gap-2.5 h-12 min-w-[180px] px-5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 hover:bg-[#1DB954] hover:border-[#1DB954] hover:scale-105 transition-all"
             >
-              <SpotifyLogo className="h-6 w-auto" showText={false} />
-              <span className="text-xs font-medium text-foreground group-hover:text-[#1DB954] transition-colors hidden sm:inline">
+              <SpotifyLogo className="h-6 w-auto flex-shrink-0" showText={false} />
+              <span className="text-sm font-medium text-foreground group-hover:text-white transition-colors whitespace-nowrap">
                 Escuchar en Spotify
               </span>
             </a>
           </div>
 
-          {/* Fila 2: Botones de acción */}
-          <div className="flex flex-wrap items-center justify-center gap-4">
+          {/* Fila 2: Botones de acción (mismo tamaño que los de arriba) */}
+          <div className="flex flex-wrap items-stretch justify-center gap-3">
             {/* Botón Escuchar música → sección discografía */}
-            <Button
-              size="lg"
-              className="rounded-full bg-gradient-to-r from-amber-400 to-fuchsia-500 text-background hover:opacity-90 px-7 font-medium"
+            <button
               onClick={() =>
                 document.getElementById('musica')?.scrollIntoView({ behavior: 'smooth' })
               }
+              className="group flex items-center justify-center gap-2.5 h-12 min-w-[180px] px-5 rounded-full bg-gradient-to-r from-amber-400 to-fuchsia-500 text-background hover:opacity-90 hover:scale-105 transition-all font-medium"
             >
-              <Play className="mr-2 h-4 w-4" /> Escuchar música
-            </Button>
+              <Play className="h-4 w-4 flex-shrink-0" />
+              <span className="text-sm whitespace-nowrap">Escuchar música</span>
+            </button>
 
             {/* Botón Conoce su historia → sección historia */}
-            <Button
-              size="lg"
-              variant="outline"
-              className="rounded-full border-white/20 text-foreground hover:bg-white/5 px-7 backdrop-blur-md"
+            <button
               onClick={() =>
                 document.getElementById('historia')?.scrollIntoView({ behavior: 'smooth' })
               }
+              className="group flex items-center justify-center gap-2.5 h-12 min-w-[180px] px-5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-foreground hover:bg-white/20 hover:scale-105 transition-all font-medium"
             >
-              <Sparkles className="mr-2 h-4 w-4" /> Conoce su historia
-            </Button>
+              <Sparkles className="h-4 w-4 flex-shrink-0" />
+              <span className="text-sm whitespace-nowrap">Conoce su historia</span>
+            </button>
           </div>
         </motion.div>
 
@@ -910,17 +910,17 @@ function History() {
           </div>
           <div className="glass rounded-3xl p-6 md:p-8 flex flex-col justify-between">
             <div>
-              <div className="text-xs uppercase tracking-[0.3em] text-primary/80 font-medium mb-4">
+              <div className="text-xs uppercase tracking-[0.3em] text-primary/80 font-medium mb-5">
                 Plataformas oficiales
               </div>
-              <div className="space-y-2.5">
+              <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
                 {[
-                  { Logo: SpotifyLogo, name: 'Spotify', note: '309 oyentes/mes · Bakanora 25K+', url: ARTIST.social.spotify },
-                  { Logo: YouTubeLogo, name: 'YouTube', note: 'Canal @alfredwhiteco · 18+ videos', url: ARTIST.social.youtube },
+                  { Logo: SpotifyLogo, name: 'Spotify', note: '309 oyentes/mes', url: ARTIST.social.spotify },
+                  { Logo: YouTubeLogo, name: 'YouTube', note: '18+ videos', url: ARTIST.social.youtube },
                   { Logo: InstagramLogo, name: 'Instagram', note: '@alfredwhiteco', url: ARTIST.social.instagram },
-                  { Logo: FacebookLogo, name: 'Facebook', note: 'Alfred White (alfredo.cartagena.37)', url: ARTIST.social.facebook },
+                  { Logo: FacebookLogo, name: 'Facebook', note: 'Alfred White', url: ARTIST.social.facebook },
                   { Logo: TikTokLogo, name: 'TikTok', note: '@alfredwhiteelparcero', url: ARTIST.social.tiktok },
-                  { Logo: ShazamLogo, name: 'Shazam', note: 'Reconocimiento de canciones', url: ARTIST.social.shazam },
+                  { Logo: ShazamLogo, name: 'Shazam', note: 'Reconocimiento', url: ARTIST.social.shazam },
                 ].map((p) => (
                   <a
                     key={p.name}
@@ -928,19 +928,18 @@ function History() {
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label={`Visitar ${p.name} oficial de Alfred White`}
-                    className="group flex items-center gap-3 hover:bg-white/5 -mx-2 px-2 py-2 rounded-lg transition-all hover:translate-x-1"
+                    className="group flex flex-col items-center justify-center gap-2 p-3 rounded-2xl bg-white/5 hover:bg-white/10 border border-white/5 hover:border-white/20 transition-all hover:scale-105 hover:-translate-y-1"
                   >
-                    {/* Logo oficial de la plataforma */}
-                    <div className="flex-shrink-0 h-8 w-8 flex items-center justify-center">
-                      <p.Logo className="h-8 w-auto" showText={false} />
+                    {/* Logo oficial grande y visible */}
+                    <div className="flex-shrink-0 h-12 w-12 flex items-center justify-center">
+                      <p.Logo className="h-12 w-12" showText={false} />
                     </div>
-                    {/* Info de la plataforma */}
-                    <div className="min-w-0 flex-1">
-                      <div className="text-sm font-medium text-foreground group-hover:text-primary transition-colors flex items-center gap-1">
+                    {/* Nombre de la plataforma */}
+                    <div className="text-center">
+                      <div className="text-xs font-bold text-foreground group-hover:text-primary transition-colors">
                         {p.name}
-                        <ArrowUpRight className="h-3 w-3 opacity-0 group-hover:opacity-100 transition-opacity" />
                       </div>
-                      <div className="text-[11px] text-muted-foreground truncate">{p.note}</div>
+                      <div className="text-[10px] text-muted-foreground truncate max-w-[100px]">{p.note}</div>
                     </div>
                   </a>
                 ))}
