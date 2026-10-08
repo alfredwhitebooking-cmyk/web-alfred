@@ -647,12 +647,12 @@ function Hero() {
           <span className="h-2 w-2 rounded-full bg-emerald-400 animate-ping" />
         </motion.div>
 
-        {/* Nombre del artista */}
+        {/* Nombre del artista: En una sola línea horizontal ("a lo largo") y en Rojo Neón */}
         <motion.h1
           initial={{ opacity: 0, y: 40, scale: 0.96 }}
           animate={{ opacity: 1, y: 0, scale: 1 }}
           transition={{ duration: 0.9, delay: 0.35, ease: [0.21, 0.47, 0.32, 0.98] }}
-          className="font-display text-[clamp(4.5rem,17vw,17rem)] leading-[0.82] text-gold-gradient drop-shadow-[0_10px_40px_rgba(0,0,0,0.9)] tracking-tight select-none"
+          className="font-display text-[clamp(2.5rem,8.5vw,9.5rem)] leading-none tracking-wider whitespace-nowrap text-neon-red select-none filter drop-shadow-[0_0_35px_rgba(255,26,53,0.85)] uppercase py-2"
         >
           {ARTIST.name}
         </motion.h1>
